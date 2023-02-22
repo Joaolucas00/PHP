@@ -18,6 +18,13 @@
         );
         var_dump($exemplo_array);
         // Imprime: array(3) { [0]=> string(6) "valor0" [1]=> string(6) "valor1" [2]=> string(6) "valor2" }
+        echo "<br>";
+        // Utilizando a sintaxe curta
+        $outro_exempro_array = [
+            "nome" => "João",
+            "idade" => 18,
+        ];
+        var_dump($outro_exempro_array);
     ?>   
     </pre> 
 </body>

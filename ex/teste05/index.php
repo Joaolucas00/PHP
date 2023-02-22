@@ -33,6 +33,35 @@
          * null será convertido para uma string vazia, por exemplo, a chave null na verdade será armazenada como "".       
          * arrays e objects não podem ser usados como chaves. Fazer isso resultará em um aviso: Illegal offset type.  
          */
+        echo "<br>";
+
+        $vetor = array( //É possível especificar a chave somente para alguns elementos e omití-las para outros:
+                    '1', 
+                    '2',
+            6 => 3, 
+                    4
+        ); // a chave após a chave 6 irá ser 7, pois a última chave inteira antes dele foi 6
+        $matriz = array(
+            "pessoa01" => array(
+                "nome" => "João",
+                "idade" => 18,
+            ),
+            "pessoa02" => array(
+                "nome" => "Lucas",
+                "idade" => 19,
+            )
+        );
+        echo "<hr>";
+        var_dump($matriz);
+        echo "<br>";
+        echo "<hr>";
+
+        var_dump($vetor);
+        var_dump($vetor[6]);
+        var_dump($exemplo_array["v1"]);
+        var_dump($matriz["pessoa01"]["nome"]);
+        var_dump($matriz["pessoa02"]);
+        var_dump($matriz["pessoa02"]["idade"]);
 
     ?>   
     </pre> 

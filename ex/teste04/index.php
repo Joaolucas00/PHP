@@ -68,5 +68,34 @@
     ?>
     </p>
 
+    <?php // Podemos envolver o nome da variável com chaves para especificar explicitamente o fim do nome.
+        $suco = "maça";
+        echo "Ele bebeu um suco feito de ${suco}s.";
+    ?>
+
+<pre>
+<?php
+$sucos = array("maçã", "laranja", "koolaid1" => "roxo");
+
+echo "Ele bebeu um pouco de suco $sucos[0]".PHP_EOL;
+echo "Ele bebeu um pouco de suco $sucos[1].".PHP_EOL;
+echo "Ele bebeu um pouco de suco $sucos[koolaid1].".PHP_EOL;
+
+class Pessoa {
+    public $john = "João Silva";
+    public $jane = "Jane Smith";
+    public $robert = "Robert Paulsen";
+
+    public $smith = "Smith";
+}
+
+$pessoa = new pessoa();
+
+echo "$pessoa->john bebeu um pouco de suco de $sucos[0].".PHP_EOL;
+echo "$pessoa->john então disse olá para $pessoa->jane.".PHP_EOL;
+echo "Esposa de $pessoa->john cumprimentou $pessoa->robert.".PHP_EOL;
+echo "$pessoa->robert cumprimentou os dois {$pessoa->smith}s."; // Não vai funcionar se não usar chaves
+?>
+</pre>
 </body>
 </html>

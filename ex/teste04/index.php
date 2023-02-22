@@ -91,7 +91,7 @@ class Pessoa {
 
 $pessoa = new pessoa();
 
-echo "$pessoa->john bebeu um pouco de suco de $sucos[0].".PHP_EOL;
+echo "$pessoa->john bebeu um pouco de suco de {$sucos[0]}s.".PHP_EOL;
 echo "$pessoa->john então disse olá para $pessoa->jane.".PHP_EOL;
 echo "Esposa de $pessoa->john cumprimentou $pessoa->robert.".PHP_EOL;
 echo "$pessoa->robert cumprimentou os dois {$pessoa->smith}s."; // Não vai funcionar se não usar chaves

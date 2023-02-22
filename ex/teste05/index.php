@@ -7,11 +7,18 @@
     <title>Arrays</title>
 </head>
 <body>
+    <pre>
     <?php 
-    
-    
-    
-    
-    ?>    
+        //Utilizando array()
+        $exemplo_array = array(
+            0 => 'valor0',
+            "v1" => 'valor1',
+            2 => 'valor2',
+            'Três' => "<strong>valor3</strong>",
+        );
+        var_dump($exemplo_array);
+        // Imprime: array(3) { [0]=> string(6) "valor0" [1]=> string(6) "valor1" [2]=> string(6) "valor2" }
+    ?>   
+    </pre> 
 </body>
 </html>

@@ -62,6 +62,14 @@
         var_dump($matriz["pessoa01"]["nome"]);
         var_dump($matriz["pessoa02"]);
         var_dump($matriz["pessoa02"]["idade"]);
+        $matriz["pessoa01"]["nome"] = "L";
+        var_dump($matriz["pessoa01"]["nome"]);
+        $vetor02 = array(1 => 5, 1, 11 => 2);
+        $vetor02[] = 3; // Adicionando um elemento no final do vetor
+        var_dump($vetor02);
+        unset($vetor02[11]); // Isto remove um elemento do array
+        var_dump($vetor02);
+        unset($vetor02); // E isto apaga todo o array
 
     ?>   
     </pre> 

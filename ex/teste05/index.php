@@ -121,7 +121,7 @@
         $vet3 = [0, ...$vet2];
         print_r($vet3);
 
-        // dá pra usar cunções que retornam arrays também
+        // dá pra usar funções que retornam arrays também
         function funcVet() {
             return ['1', '2'];
         }

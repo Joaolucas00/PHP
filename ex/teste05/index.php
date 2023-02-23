@@ -89,6 +89,32 @@
         $arr = array_values($arr);
         $arr[] = 7;
         print_r($arr);
+        echo "<hr>";
+
+
+        //Arrays podem ser desconstruídos utilizando [] (a partir do PHP 7.1.0) ou list(). 
+        //Esses constructos podem ser utilizados para desconstruir o array em variáveis distintas.
+        // Exemplo:
+        $frutas = ['Maça', 'Laranja', 'Uva'];
+        [$maca, $laranj, $uv] = $frutas;
+        echo $maca;
+        echo $laranj;
+        echo $uv;
+
+        $vet = ['a' => 1, 'b' => 2, 'c' => 3];
+        ['c' => $tres] = $vet;
+        echo $tres;
+        echo "<br>";
+
+        // Algo bem útil: Desconstrução de arrays podem ser utilizados para trocar duas variáveis.
+        // Exemplo: 
+        $n1 = 1;
+        $n2 = 2;
+
+        [$n2, $n1] = [$n1, $n2]; // trocando os valores
+        echo $n1; // Imprime: 2
+        echo $n2; // Imprime: 1
+
 
     ?>   
     </pre> 

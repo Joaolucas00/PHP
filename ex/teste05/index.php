@@ -114,8 +114,19 @@
         [$n2, $n1] = [$n1, $n2]; // trocando os valores
         echo $n1; // Imprime: 2
         echo $n2; // Imprime: 1
+        echo "<hr>";
+        // Espalhando arrays dentro de arrays
+        $vet1 = [1, 2, 3];
+        $vet2 = [...$vet1];
+        $vet3 = [0, ...$vet2];
+        print_r($vet3);
 
-
+        // dá pra usar cunções que retornam arrays também
+        function funcVet() {
+            return ['1', '2'];
+        }
+        $vet4 = [...funcVet(), 'c' => 'd'];
+        print_r($vet4);
     ?>   
     </pre> 
 </body>

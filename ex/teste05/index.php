@@ -70,6 +70,25 @@
         unset($vetor02[11]); // Isto remove um elemento do array
         var_dump($vetor02);
         unset($vetor02); // E isto apaga todo o array
+        echo "<hr>";
+
+
+        $arr = array(1, 2, 3, 4, 5);
+        print_r($arr);
+
+        foreach ($arr as $i => $value) { // apagando os itens, mas o array ainda existe.
+            unset($arr[$i]);
+        }
+        print_r($arr);
+
+        $arr[] = 6; // adicionando um item, a chave vai ser 5, em vez de 0
+        print_r($arr);
+
+
+        // Reindexando:
+        $arr = array_values($arr);
+        $arr[] = 7;
+        print_r($arr);
 
     ?>   
     </pre> 

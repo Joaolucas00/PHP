@@ -15,11 +15,40 @@
         var_dump($var);
         addElementArray($var);
         var_dump($var);
+        fim();
     ?>
     <?php 
         // Declaração de tipo de retorno básico
         function soma($a, $b): float {return $a + $b;}
         var_dump(soma(1, 4));
+        fim();
+    ?>
+    <?php 
+        //Declaração de tipo de argumento anulável
+        class C {}
+        
+        function f(?C $c) {
+            var_dump($c);
+        }
+        
+        f(new C);
+        f(null);
+    ?>
+    <?php
+        /** Tipagem estrita
+         * Por padrão, o PHP forçará valores do tipo errado na declaração de tipo escalar esperada, se possível.
+         * Se um função tem como parâmetro int e for dada um parâmetro float,
+         *  o valor retornado será int.
+         *  No modo estrito, apenas um valor correspondente exatamente à declaração do tipo será aceito, senão um TypeError será lançado.
+         */
+        declare(strict_types=1);
+
+        function sum(int $a, int $b) {
+            return $a + $b;
+        }
+
+        var_dump(sum(1, 2));
+        //var_dump(sum(1.5, 2.5)); não funciona com strict_types ativado, lança um TypeError
     ?>
 </body>
 </html>

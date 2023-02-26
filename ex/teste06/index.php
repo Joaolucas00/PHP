@@ -33,6 +33,7 @@
         
         f(new C);
         f(null);
+        fim();
     ?>
     <?php
         /** Tipagem estrita
@@ -41,7 +42,8 @@
          *  o valor retornado será int.
          *  No modo estrito, apenas um valor correspondente exatamente à declaração do tipo será aceito, senão um TypeError será lançado.
          */
-        declare(strict_types=1);
+        //declare(strict_types=1); senão for colocada como a primeira declaração do script lança um Fatal error.
+        //Fatal error: strict_types declaration must be the very first statement in the script in C:\xampp\htdocs\curso-php\ex\teste06\index.php on line 45
 
         function sum(int $a, int $b) {
             return $a + $b;

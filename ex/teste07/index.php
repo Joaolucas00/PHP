@@ -101,7 +101,20 @@
     var_dump(teste_1::counter()); // int (2)
     var_dump(teste_2::counter()); // int (3), e antes do PHP 8.1.0 int (1)
     var_dump(teste_2::counter()); // int (4), e antes do PHP 8.1.0 int (2)
-
+    fim();
+    ?>
+    <h1>Variável variável</h1>
+    <?php 
+        //Uma variável variável obtém o valor de uma variável e a trata como o nome de uma variável.
+        $exemplo = 'Olá';
+        $$exemplo = ', Mundo!';
+        /** Ou seja,
+         * você pode usar Olá como um *nome de uma variável*.
+         * Você pode imprimir echo "$a ${$a} ou imprimir echo "$a $Olá" e vai dar no mesmo.
+         */
+        echo "$exemplo " . $$exemplo;
+        echo "<br> $exemplo $Olá";
+    
     ?>
 </body>
 </html>

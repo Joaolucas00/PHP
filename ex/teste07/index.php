@@ -70,13 +70,19 @@
         teste(); // imprime 1 e adiciona 1, agora $a é 2, não vai atribuir 0 novamente porque a variável é estática.
         teste(); // imprime 2 e adiciona 1, agora $a é 3, não vai atribuir 0 novamente porque a variável é estática.
         echo $b;
-
+        echo "<br>";
+        // Variáveis estáticas são bastante úteis em funções recursivas.
+        // Exemplo:
         function contar() {
             static $count = 0;
             $count++;
-            if ($count < 10) {contar();}
+            if ($count < 10) {
+                contar();
+            }
+            echo $count;
             $count--;
         }
+        contar();
     ?>
 </body>
 </html>

@@ -83,6 +83,25 @@
             $count--;
         }
         contar();
+        fim();
+    ?>
+
+    <?php
+
+    class teste_1 {
+        public static function counter() {
+            static $cc = 0;
+            $cc++;
+            return $cc;
+        }
+    }
+
+    class teste_2 extends teste_1 {}
+    var_dump(teste_1::counter()); // int (1)
+    var_dump(teste_1::counter()); // int (2)
+    var_dump(teste_2::counter()); // int (3), e antes do PHP 8.1.0 int (1)
+    var_dump(teste_2::counter()); // int (4), e antes do PHP 8.1.0 int (2)
+
     ?>
 </body>
 </html>

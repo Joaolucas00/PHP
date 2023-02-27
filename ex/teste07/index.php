@@ -58,9 +58,25 @@
     ?>
     <h1>Static</h1>
     <?php 
-        
-    
-    
+        function teste() {
+            static $a = 0; // a variável $a não vai perder o valor mesmo quando a função for chamada novamente.
+            // E não vai reatribuir 0.
+            echo $a;
+            $a++;
+            global $b;
+            $b = $a;
+        }
+        teste(); // imprime 0 e adiciona 1, agora $a é 1
+        teste(); // imprime 1 e adiciona 1, agora $a é 2, não vai atribuir 0 novamente porque a variável é estática.
+        teste(); // imprime 2 e adiciona 1, agora $a é 3, não vai atribuir 0 novamente porque a variável é estática.
+        echo $b;
+
+        function contar() {
+            static $count = 0;
+            $count++;
+            if ($count < 10) {contar();}
+            $count--;
+        }
     ?>
 </body>
 </html>

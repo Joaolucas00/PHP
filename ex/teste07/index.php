@@ -116,5 +116,7 @@
         echo "<br> $exemplo $Olá";
     
     ?>
+    <br>
+    <a href="imagem.html">Testando imagem</a>
 </body>
 </html>

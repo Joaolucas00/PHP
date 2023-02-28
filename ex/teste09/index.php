@@ -23,6 +23,25 @@
         }
 
         //var_dump(get_defined_constants()); // para obter todas as contantes definidas.
+
+        /** Estas são as diferenças entre constantes e variáveis:
+         * Constantes não possuem um sinal de cifrão ($) antes delas;
+         * Constantes podem ser definidas e acessadas de qualquer lugar sem que a regras de escopo de variáveis sejam aplicadas;
+         * Constantes não podem ser redefinidas ou eliminadas depois de criadas; e
+         * Constantes só podem ter valores escalares ou arrays.
+         */
+
+
+         const ANIMAIS = ["Gato", "Cachorro", "Rato"];
+         echo ANIMAIS[1];
+         
+         define("VETOR", array(
+            1,
+            2,
+            3,
+         ));
+         echo VETOR[1];
+
     ?>    
     </pre>
 

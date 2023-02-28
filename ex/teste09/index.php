@@ -7,11 +7,24 @@
     <title>Constantes PHP</title>
 </head>
 <body>
+    <pre>
     <?php 
-    
-    
-    ?>    
+        const TESTE1 = 1;
+        const TESTE2 = 2;
+        const TESTE3 = 3;
+        define("TESTE4", 4);
+        define("TESTE5", 5);
+        var_dump(defined('TESTE1')); // defined() verifica se a constante está definida
+        if (defined('TESTE1')) {
+            var_dump(constant('TESTE1')); // constant() para verificar o valor da constante
+        }
+        else {
+            echo "Constante não definida";
+        }
 
+        //var_dump(get_defined_constants()); // para obter todas as contantes definidas.
+    ?>    
+    </pre>
 
 
 </body>

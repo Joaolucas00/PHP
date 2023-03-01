@@ -75,3 +75,16 @@ input#isobrenome {
     left: 50%;
     top: 50%;
 }
+
+input#enviar {
+    cursor: pointer;
+    font-size: 1.2em;
+    background-color: white;
+    color: black;
+    position: absolute;
+    left: 6%;
+    top: 74%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+}

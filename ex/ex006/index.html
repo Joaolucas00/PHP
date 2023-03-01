@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <main>
     <header>
-        <h1>Apresente-se para nós</h1>
+        <h1>Apresente-se para nós!</h1>
     </header>
     <section>
-        <form action="" method="get">
-            <label for="inome">Nome: </label>
+        <form action="cad.php" method="get">
+            <label for="inome">Nome: </label> <br>
             <input type="text" name="nome" id="inome" required maxlength="30">
-            <label for="isobrenome">Sobrenome</label>
+            <label for="isobrenome" id="sob">Sobrenome: </label>
             <input type="text" name="sobrenome" id="isobrenome" required maxlength="30">
 
         </form>
     </section>
+    </main>
 </body>
 </html>

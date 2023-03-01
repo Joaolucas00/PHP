@@ -1,3 +1,77 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat';
+}
+
+body, html {
+    background-image: linear-gradient(to top, rgb(100, 72, 112), rgb(48, 22, 48));
+    width: 100vw;
+    height: 100vh;
+}
+html {
+    position: relative;
+}
+main {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
 
 
+header {
+    background-image: linear-gradient(to top, rgb(141, 83, 141), rgb(255, 86, 255));
+    width: 420px;
+    height: 100px;
+    margin: auto;
+}
+
+header > h1 {
+    padding-top: 18px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+}
+
+section {
+    position: relative;
+    background-color: blueviolet;
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+    height: 100px;
+    border:  1px solid black;
+}
+
+label {
+    font-weight: 350;
+    color: white;
+    font-size: 1.3em;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+
+}
+#sob {
+    position: absolute;
+    left: 2%;
+    top: 30%;
+}
+input {
+    background-color: rgb(99, 34, 160);
+    color: white;
+}
+
+input#inome {
+    position: absolute;
+    left: 50%;
+    top: 12%;
+}
+input#isobrenome {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}

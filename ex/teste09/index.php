@@ -41,6 +41,8 @@
             3,
          ));
          echo VETOR[1];
+         $b = ($a = 5); // é como escrever $a = 5 $b = 5 também pode escrever $b = $a = 5
+         echo ", $b, $a";
 
     ?>    
     </pre>

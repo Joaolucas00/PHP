@@ -30,7 +30,7 @@
     <main>
     <header>
         <h1><?php 
-            if(isset($_GET["nome"]) || isset($_GET["sobrenome"])) {
+            if(isset($_GET["nome"]) && isset($_GET["sobrenome"])) {
                 echo "Olá, $nome!";
             }
             else {
@@ -40,7 +40,7 @@
     </header>
     <section>
         <p><?php 
-            if (isset($_GET["nome"]) || isset($_GET["sobrenome"])) {
+            if (isset($_GET["nome"]) && isset($_GET["sobrenome"])) {
             echo "É um prazer te conhecer, $nome $sobrenome ";
             }
             else {

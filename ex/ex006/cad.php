@@ -24,8 +24,8 @@
 </head>
 <body>
     <?php 
-        $nome = $_GET["nome"];
-        $sobrenome = $_GET["sobrenome"];
+        $nome = $_GET["nome"] ?? false; // O operador de coalescência nula ( ?? )
+        $sobrenome = $_GET["sobrenome"] ?? false; // Se ele não conseguir pegar o nome, o depois de (??) vai ser jogado na variável
     ?>
     <main>
     <header>

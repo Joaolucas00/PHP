@@ -77,14 +77,19 @@ input#isobrenome {
 }
 
 input#enviar {
-    cursor: pointer;
-    font-size: 1.2em;
-    background-color: white;
-    color: black;
     position: absolute;
     left: 6%;
     top: 74%;
+    cursor: pointer;
+    font-size: 1.2em;
+    background-color: rgb(255, 255, 255);
+    color: black;
     padding-left: 10px;
     padding-right: 10px;
     margin: auto;
+}
+
+input#enviar:hover {
+    background-color: rgb(182, 129, 231);
+    color: white;
 }

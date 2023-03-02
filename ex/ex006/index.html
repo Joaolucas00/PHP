@@ -22,5 +22,20 @@
         </form>
     </section>
     </main>
+
+    <script>
+        inpMauseEntrar = document.getElementById('enviar')
+        inpMauseEntrar.addEventListener("mouseenter", modCSS)
+        inpMauseEntrar.addEventListener("mouseleave", voltarAoNormal)
+        function modCSS() {
+            inpMauseEntrar.style.backgroundColor = 'rgb(182, 129, 231)'   
+            inpMauseEntrar.style.color = 'white'     
+        }
+        function voltarAoNormal() {
+            inpMauseEntrar.style.backgroundColor = 'white'
+            inpMauseEntrar.style.color = 'Black'
+        }
+
+    </script>
 </body>
 </html>

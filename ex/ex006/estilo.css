@@ -88,8 +88,3 @@ input#enviar {
     padding-right: 10px;
     margin: auto;
 }
-
-input#enviar:hover {
-    background-color: rgb(182, 129, 231);
-    color: white;
-}

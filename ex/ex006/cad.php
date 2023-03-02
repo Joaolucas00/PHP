@@ -10,7 +10,16 @@
         p {
             color: white;
         }
+        a {
+    color: rgb(192, 226, 241);
+    font-style: normal;
+    text-decoration: none;
+    }
 
+    a:hover {
+        color: rgb(122, 217, 255);
+        text-decoration: underline;
+    }
     </style>
 </head>
 <body>
@@ -20,14 +29,25 @@
     ?>
     <main>
     <header>
-        <h1>Olá, <?php 
-                echo "$nome!";
+        <h1><?php 
+            if(isset($_GET["nome"])) {
+                echo "Olá, $nome!";
+            }
+            else {
+                echo "Houve um problema!";
+            }
         ?></h1>
     </header>
     <section>
         <p><?php 
-            echo "É um prazer te conhecer, $nome $sobrenome"
-        ?>    
+            if (isset($_GET["nome"]) || isset($_GET["sobrenome"])) {
+            echo "É um prazer te conhecer, $nome $sobrenome ";
+            }
+            else {
+                echo "Houve algum problema, tente novamente.";
+            }
+        ?>  
+        <a href="javascript:history.go(-1)"><br>Voltar para a página anterior.</a>  
         </p>
     </section>
     </main>

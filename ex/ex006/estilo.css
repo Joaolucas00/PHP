@@ -7,6 +7,17 @@
     font-family: 'Montserrat';
 }
 
+a {
+    color: rgb(192, 226, 241);
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(122, 217, 255);
+    text-decoration: overline;
+}
+
 
 p {
     color: white;

@@ -31,7 +31,18 @@
         // é avaliado da esquerda para a direita, mas é bom colocar os parênteses para facilitar a leitura do código
 
         // operador de coalescência nula (??)
-        $exemplo = $_REQUEST['exemplo'];
+        $exemplo = $_REQUEST['exemplo'] ?? null; // se a primeira opção for false, a segunda é atribuída.
+        var_dump($exemplo);
+
+        // é a mesma coisa que:
+
+        if (isset($_REQUEST['exemplo'])) {
+             $exemplo = $_REQUEST['exemplo'];
+        } else {
+            $exemplo = null;
+        }
+
+
     ?>
 </body>
 </html>

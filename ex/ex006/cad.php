@@ -24,13 +24,13 @@
 </head>
 <body>
     <?php 
-        $nome = $_GET["nome"] ?? false; // O operador de coalescência nula ( ?? )
-        $sobrenome = $_GET["sobrenome"] ?? false; // Se ele não conseguir pegar o nome, o depois de (??) vai ser jogado na variável
+        $nome = $_GET["nome"] ?? null; // O operador de coalescência nula ( ?? )
+        $sobrenome = $_GET["sobrenome"] ?? null; // Se ele não existir $_GET(sobrenome), o depois de (??) vai ser jogado na variável
     ?>
     <main>
     <header>
         <h1><?php 
-            if(isset($_GET["nome"])) {
+            if(isset($_GET["nome"]) || isset($_GET["sobrenome"])) {
                 echo "Olá, $nome!";
             }
             else {

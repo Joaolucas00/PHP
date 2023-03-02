@@ -7,6 +7,12 @@
     font-family: 'Montserrat';
 }
 
+
+p {
+    color: white;
+}
+
+
 body, html {
     background-image: linear-gradient(to top, rgb(100, 72, 112), rgb(48, 22, 48));
     width: 100vw;

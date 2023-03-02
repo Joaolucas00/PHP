@@ -42,6 +42,12 @@
             $exemplo = null;
         }
 
+        // A parte legal do operador de coalescência nula é que ele pode ser alinhado
+        $var1 = null;
+        $var2 = null;
+        $var3 = 0;
+        $var4 = '4';
+        var_dump($var1 ?? $var2 ?? $var3 ?? $var4);
 
     ?>
 </body>

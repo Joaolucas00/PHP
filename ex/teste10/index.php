@@ -113,6 +113,17 @@
         var_dump($filho instanceof classePai); // true
         var_dump($filho instanceof classFilho); // true
 
+        var_dump(!($exemplo instanceof stdClass)); // true
+
+        // também dá pra usar com interface
+        interface MinhaInterface {}
+
+        class MinhaClasse implements MinhaInterface {}
+
+        $objeto = new MinhaClasse;
+
+        var_dump($objeto instanceof MinhaClasse); // true
+        var_dump($objeto instanceof MinhaInterface); // true
     ?>
 </body>
 </html>

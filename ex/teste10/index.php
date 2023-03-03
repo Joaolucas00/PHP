@@ -70,5 +70,25 @@
 
     ?>
 
+
+    <?php 
+        $vetor_a = array(1 => 'a', 2=> 'b', 3 => 'c');
+        $vetor_b = array(4 => 'd', 5 => 'e', 6 => 'f');
+        $juncao_a_b = ($vetor_a + $vetor_b);
+        echo "<br> <pre>";
+        var_dump($juncao_a_b);
+        echo "</pre>";
+        // Para chaves que existam nos dois arrays os elementos do array à esquerda serão mantidos, os valores de mesma chave no array da direita são ignorados.
+        
+        $vetor_c = ["avião", "carro"];
+        $vetor_d = [1 => "carro", "0" => "avião"];
+
+        var_dump($vetor_c == $vetor_d); // true
+        var_dump($vetor_c === $vetor_d); // false
+
+        // vetor_c == vetor_d: true se $a e $b tem os mesmos pares de chave/valor.
+        // vetor_c === vetor_d: true se $a e $b tem os mesmos pares de chave/valor na mesma ordem e do mesmo tipo.
+    
+    ?>
 </body>
 </html>

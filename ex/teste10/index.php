@@ -48,7 +48,14 @@
         $var3 = 0;
         $var4 = '4';
         var_dump($var1 ?? $var2 ?? $var3 ?? $var4);
+        echo "<br><hr>";
 
+        // operador de controle de erro (@)
+        // Erro intencional
+        $arquivo = @file('arquivo_nao_existente') or die ("Falha abrindo o arquivo: '\$php_errormsg'");
+        // Ele tentará fazer a ação que está prefixada, senão conseguir vai disparar o que está após o dele (or die).
+        // Caso track_errors estiver habilitado, qualquer mensagem de erro será gravada na variável $php_errormsg.
+        // Esta variável será sobrescrita em cada erro.
     ?>
 </body>
 </html>

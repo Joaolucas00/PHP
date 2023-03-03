@@ -90,6 +90,29 @@
         // vetor_c === vetor_d: true se $vetor_c e $vetor_d tem os mesmos pares de chave/valor na mesma ordem e do mesmo tipo.
         
         var_dump($vetor_a != $vetor_b); // true
+        echo "<br> <hr>";
+        // Operadores de tipo
+        
+        class Exemplo {}
+
+        class outroExemplo {}
+
+        $exemplo = new Exemplo;
+
+        // instanceof, usado para determinar se a variável é um objeto instanciado de uma classe:
+        var_dump($exemplo instanceof Exemplo); // true
+        var_dump($exemplo instanceof outroExemplo); // false
+
+        // também ser usado para determinar se é instanciado de uma classe que herda a classe pai:
+        class classePai {}
+
+        class classFilho extends classePai {}
+
+        $filho = new classFilho;
+
+        var_dump($filho instanceof classePai); // true
+        var_dump($filho instanceof classFilho); // true
+
     ?>
 </body>
 </html>

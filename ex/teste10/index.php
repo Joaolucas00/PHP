@@ -86,9 +86,10 @@
         var_dump($vetor_c == $vetor_d); // true
         var_dump($vetor_c === $vetor_d); // false
 
-        // vetor_c == vetor_d: true se $a e $b tem os mesmos pares de chave/valor.
-        // vetor_c === vetor_d: true se $a e $b tem os mesmos pares de chave/valor na mesma ordem e do mesmo tipo.
-    
+        // vetor_c == vetor_d: true se $vetor_c e $vetor_d tem os mesmos pares de chave/valor.
+        // vetor_c === vetor_d: true se $vetor_c e $vetor_d tem os mesmos pares de chave/valor na mesma ordem e do mesmo tipo.
+        
+        var_dump($vetor_a != $vetor_b); // true
     ?>
 </body>
 </html>

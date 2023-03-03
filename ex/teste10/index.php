@@ -7,7 +7,7 @@
     <title>Operador ternário e lógicos</title>
 </head>
 <body>
-    <?php 
+    <?php
         //alguns testes com operadores de Comparação
         var_dump("1" == "01"); // 1 == 1 -> true
         var_dump("10" == "1e1"); // 10 == 10 -> true
@@ -52,10 +52,23 @@
 
         // operador de controle de erro (@)
         // Erro intencional
-        $arquivo = @file('arquivo_nao_existente') or die ("Falha abrindo o arquivo: '\$php_errormsg'");
+        //$arquivo = @file('arquivo_nao_existente') or die ("Falha abrindo o arquivo: '\$php_errormsg'");
         // Ele tentará fazer a ação que está prefixada, senão conseguir vai disparar o que está após o dele (or die).
         // Caso track_errors estiver habilitado, qualquer mensagem de erro será gravada na variável $php_errormsg.
         // Esta variável será sobrescrita em cada erro.
+
+
+        // Concatenação ('.') e ('.=')
+        // Exemplo: 
+        $varx = "Olá, ";
+        $vary = $varx . "Mundo!";
+        echo "$vary";
+
+        $varx = "Olá, ";
+        $varx .= "Mundo!";
+        echo $varx;
+
     ?>
+
 </body>
 </html>

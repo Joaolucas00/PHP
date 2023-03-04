@@ -140,6 +140,11 @@
             echo "A: $a; B: $b; C: $c;"; 
             // caso não exista elentos suficientes um aviso será lançado
         }
+        echo "<br>";
+        // outra maneira de fazer a mesma coisa
+        foreach ($outraMatriz as [$a, $b]) {
+            echo "A: $a; B: $b <br>";
+        }
     ?>
 </body>
 </html>

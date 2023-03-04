@@ -88,6 +88,24 @@
         unset($value); // quebra a referência com o último elemento
         var_dump($arr); // $arr é (2, 4, 6, 8) agora
 
+        // outra forma de fazer a mesma coisa
+        foreach (array(1, 2, 3, 4) as &$valor) {
+            $valor = $valor * 2;
+        }
+        unset($valor);
+        echo "<hr>";
+
+        //Obs: O foreach não possui suporte a habilidade de suprimir mensagens de erro utilizando @.
+        $a = array(
+            "um" => 1,
+            "dois" => 2,
+            "Três" => 3,
+            "quatro" => 4,
+        );
+
+        foreach ($a as $k => $v) { // $k é a chave e $v é o valor da chave
+            echo "\$a[$k] => $v. <br>";
+        }
     ?>
 </body>
 </html>

@@ -106,6 +106,16 @@
         foreach ($a as $k => $v) { // $k é a chave e $v é o valor da chave
             echo "\$a[$k] => $v. <br>";
         }
+
+        // Testando foreach com matrizes
+        echo "<br>";
+        $matriz = [[0, 1], [0, 1]];
+
+        foreach ($matriz as $val_1) {
+            foreach ($val_1 as $val_2) {
+                echo "$val_2 <br>";
+            }
+        }
     ?>
 </body>
 </html>

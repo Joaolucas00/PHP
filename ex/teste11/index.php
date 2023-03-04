@@ -135,6 +135,11 @@
         foreach ($outraMatriz as list($elemento_1)) {
             echo "$elemento_1";
         }
+
+        foreach ($outraMatriz as list($a, $b, $c)) {
+            echo "A: $a; B: $b; C: $c;"; 
+            // caso não exista elentos suficientes um aviso será lançado
+        }
     ?>
 </body>
 </html>

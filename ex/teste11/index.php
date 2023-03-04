@@ -58,6 +58,25 @@
             echo "$cont";
         }
 
+        // sem nada
+        $count = 0;
+        for(; ; ) {
+            if ($count > 10) {
+                break;
+            }
+            echo "<br>" . $count;
+            $count++;
+        }
+
+        // Usando for com array
+
+        $array = [["João", 18], ["Lucas", 19], ["Luan", 20]];
+        for ($i=0; $i < count($array); $i++) { 
+            for ($k=0; $k < count($array[$i]); $k++) { 
+                echo $array[$i][$k];
+            }
+        }
+
     ?>
 </body>
 </html>

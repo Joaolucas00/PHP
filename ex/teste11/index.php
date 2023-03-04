@@ -116,6 +116,19 @@
                 echo "$val_2 <br>";
             }
         }
+
+        // Desempacotar arrays aninhados com o construtor list()
+
+        $outraMatriz = [
+            [1, 2],
+            [3, 4],
+        ];
+
+        foreach ($outraMatriz as list($a, $b)) {
+            // $a contém o primeiro elemento que é [1, 2]
+            // $b contém o segundo elemento que é [3, 4]
+            echo "A: $a; B: $b <br>";
+        }
     ?>
 </body>
 </html>

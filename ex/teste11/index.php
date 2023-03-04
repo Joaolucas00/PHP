@@ -76,6 +76,17 @@
                 echo $array[$i][$k];
             }
         }
+        echo "<hr>";
+
+        // Estrutura de controle foreach
+        $arr = [1, 2, 3, 4];
+        foreach ($arr as &$value) { // tem que colocar & para atribuir por referência
+            $value = $value * 2;
+        }
+        var_dump($arr);
+        echo "<br>";
+        unset($value); // quebra a referência com o último elemento
+        var_dump($arr); // $arr é (2, 4, 6, 8) agora
 
     ?>
 </body>

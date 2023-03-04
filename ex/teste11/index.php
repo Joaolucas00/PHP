@@ -125,9 +125,15 @@
         ];
 
         foreach ($outraMatriz as list($a, $b)) {
-            // $a contém o primeiro elemento que é [1, 2]
-            // $b contém o segundo elemento que é [3, 4]
+            // $a contém o primeiro elemento do array aninhado
+            // $b contém o segundo elemento
             echo "A: $a; B: $b <br>";
+        }
+
+        // você pode colocar menos elementos ao construtor list(), os demais serão ignorados
+
+        foreach ($outraMatriz as list($elemento_1)) {
+            echo "$elemento_1";
         }
     ?>
 </body>

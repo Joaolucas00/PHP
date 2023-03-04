@@ -30,10 +30,33 @@
         ITEM;
         $i = 1;
         while ($i <= 10) {
-            echo $i;
+            echo "<br>" . $i;
             $i++;
         }
+        echo "<hr>";
+        // Estrutura de Repetição do-while
 
+        do {
+            static $num = 0;
+            echo "<br> $num";
+            $num += 1;
+        } while ($num <= 10);
+        echo "<hr>";
+       
+        
+        // Estrutura de Repetição for
+
+        for ($cc = 0; $cc <= 10; $cc++) {
+            echo "<br>$cc";
+        }
+        
+        // sem a parte do meio
+        for ($cont = 1; ; $cont++) {
+            if ($cont > 5) {
+                break;
+            }
+            echo "$cont";
+        }
 
     ?>
 </body>

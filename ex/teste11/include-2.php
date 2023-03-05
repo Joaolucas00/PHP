@@ -24,4 +24,12 @@
         echo "Ok";
     }
 
+
+    // include_once
+
+    /** 
+     * como o nome sugere, o arquivo será incluído somente uma vez.
+     * O include_once pode ser utilizado em casos em que o mesmo arquivo pode ser incluído e valiado mais de uma vez durante uma execução de um script em particular,
+     *  neste caso, ajudará a evitar problemas como redefinição de funções, reatribuição de valores de variáveis, e etc.
+     */
 ?>

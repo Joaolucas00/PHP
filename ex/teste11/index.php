@@ -146,7 +146,7 @@
             echo "A: $a; B: $b <br>";
         }
         echo "<hr>";
-        // Estrutura break
+        // break
         // break pode receber um argumento numérico para dizer quantas estruras de repetição alinhadas deverá interromper
         // O padrão é 1
 
@@ -175,6 +175,15 @@
             }
         }
 
+        // continue
+        // continue serve para pular o resto das outras interações, e continuar a execução na vaçidação da condição
+        $vetor_exemplo = [1, 2, 3, 4];
+        foreach ($vetor_exemplo as $key => $n) {
+            if ($n % 2 == 0) { // se o número é divisível por 2 ele volta para o foreach e recomeça o foreach.
+                continue;
+            }
+            echo "\$vetor_exemplo[$key] => $n"; // Assim só vai aparecer números ímpares
+        }
     ?> 
 </body>
 </html>

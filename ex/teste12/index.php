@@ -57,7 +57,21 @@
             foreach ($curso as $c) {echo "- $c<br>";}
         }
     }
+    echo "<hr>";
     // property_exists() verifica se um atributo de um objeto existe ou não.
     // property_exists() recebe dois argumentos, o primeiro para o objeto a verificar, o segundo, o atributo para ver se existe 
+
+    //json_decode possui um segundo paramêtro boolean para transformar o json em um array associativo
+    
+    $json = '{"nome": "Juan", "idade": 22, "sexo": "M"}';
+    // com false
+    $_objeto = json_decode($json, false); // por padrão é false
+    var_dump($_objeto); // é um objeto
+
+    echo "<br>";
+
+    // com true
+    $array = json_decode($json, true);
+    var_dump($array); // é um array
 
 ?>

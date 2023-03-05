@@ -214,7 +214,58 @@
             $objeto->atributo => 3+1,
         };
         var_dump($resultado);
-        
+
+        $x = 5;
+        $a = 5;
+        $b = 5;
+        $c = 5;
+
+        $res = match ($x) {
+            // Este braço de correspondência
+            $a, $b, $c => 5,
+            //é igual a estes 3 braços de correspondência
+            $a => 5,
+            $b => 5,
+            $c => 5,
+        };
+        var_dump($res);
+
+        // Usando match como condição
+
+        $idade = 17;
+
+        $r = match (true) {
+            $idade >= 60 => "maior de 60",
+            $idade >= 25 => "maior de 25",
+            $idade >= 18 => "maior de 18",
+            default => "menor de 18",
+        };
+
+        var_dump($r);
+
+        // outro exemplo
+        $txt = "Olá";
+        $result = match (true) {
+            str_contains($txt, "Hello") || str_contains($txt, "World") => "en",
+            str_contains($txt, "Olá") || str_contains($txt, "Mundo") => "pt-br",
+        };
+
+        var_dump($result);
+
+        // outro exemplo 
+
+        function f($num) {
+            print match (0) {
+                $num % 15 => "exemplo 1" . PHP_EOL,
+                $num % 3 => "exemplo 2" . PHP_EOL,
+                $num % 5 => "exemplo 5" . PHP_EOL,
+                default => $num . PHP_EOL,
+            };
+        }
+
+        for ($cc = 0; $cc <= 100; $cc++) {
+            f($cc);
+        }
     ?> 
 </body>
 </html>

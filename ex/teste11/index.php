@@ -145,6 +145,36 @@
         foreach ($outraMatriz as [$a, $b]) {
             echo "A: $a; B: $b <br>";
         }
-    ?>
+        echo "<hr>";
+        // Estrutura break
+        // break pode receber um argumento numérico para dizer quantas estruras de repetição alinhadas deverá interromper
+        // O padrão é 1
+
+        $um_exemplo = ["um", "dois", "três", "stop!", "quatro"];
+
+        foreach ($um_exemplo as $elemento) {
+            if ($elemento == "stop!") {
+                break; // também pode ser "break 1"
+            }
+            echo "<br> $elemento";
+        }
+
+        // outro exeplo
+
+        $n1 = 0;
+        while (++$n1) {
+            switch ($n1) {
+                case 5:
+                    echo "5 <br>";
+                    break;
+                case 10:
+                    echo "10";
+                    break 2; 
+                default:
+                    break;
+            }
+        }
+
+    ?> 
 </body>
 </html>

@@ -32,4 +32,6 @@
      * O include_once pode ser utilizado em casos em que o mesmo arquivo pode ser incluído e valiado mais de uma vez durante uma execução de um script em particular,
      *  neste caso, ajudará a evitar problemas como redefinição de funções, reatribuição de valores de variáveis, e etc.
      */
+
+     // também existe require e require_once, que é a mesma coisa que include e include_once, só que ele vai parar o script enquanto o include vai apenas emitir um aviso (E_WARNING) permitindo que o script continue
 ?>

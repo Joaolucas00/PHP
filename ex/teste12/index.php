@@ -38,4 +38,26 @@
     foreach ($galera as $g) {
         echo "nome: $g->nome - idade: $g->idade - sexo: $g->sexo -";
     }
+    echo "<hr>";
+    // em casos de campos opcionais
+    $turma = '{"alunos": '. 
+        '[{"nome": "João", "idade": 18, "sexo": "M", "cursos": ["PHP", "MySQL"]}, ' .
+        ' {"nome": "Lucas", "idade": 19, "sexo": "M"}, ' .
+        ' {"nome": "Luan", "idade": 20, "sexo": "M"} ' . 
+        ']}'; 
+
+    $objeto = json_decode($turma);
+
+    $_alunos = $objeto->alunos;
+    foreach ($_alunos as $aluno) {
+        echo "nome: $aluno->nome - idade: $aluno->idade - sexo: $aluno->sexo <br>";
+        if (property_exists($aluno, "cursos")) {
+            $curso = $aluno->cursos;
+            echo "cursos: <br>";
+            foreach ($curso as $c) {echo "- $c<br>";}
+        }
+    }
+    // property_exists() verifica se um atributo de um objeto existe ou não.
+    // property_exists() recebe dois argumentos, o primeiro para o objeto a verificar, o segundo, o atributo para ver se existe 
+
 ?>

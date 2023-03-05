@@ -177,6 +177,7 @@
 
         // continue
         // continue serve para pular o resto das outras interações, e continuar a execução na vaçidação da condição
+        // Ele também pode receber um argumento numérico para dizer qual estrutura alinhada deve recomeçar
         $vetor_exemplo = [1, 2, 3, 4];
         foreach ($vetor_exemplo as $key => $n) {
             if ($n % 2 == 0) { // se o número é divisível por 2 ele volta para o foreach e recomeça o foreach.
@@ -184,6 +185,36 @@
             }
             echo "\$vetor_exemplo[$key] => $n"; // Assim só vai aparecer números ímpares
         }
+        echo "<hr>";
+        // match 
+        // diferente do switch, a comparação é uma verificação de identidade (===)
+        $comida = "maça";
+        $valor_de_retorno = match ($comida) {
+            "maça" => "Essa comida é uma maça.",
+            "bolo" => "Essa comida é um bolo",
+            "Uva" => "Essa comida é uma uva",
+        }; // Uma expressão match deve terminar por um ponto e vírgula ;.
+
+        var_dump($valor_de_retorno);
+        echo "<br>";
+        class Classe {
+            public $atributo = 3;
+            public function func() {
+                return 2;
+            }
+        
+        }
+
+        $var = 3;
+        $objeto = new Classe;
+        function funcao() {return 0;}
+        $resultado = match ($var) {
+            funcao() => $var+1,
+            $objeto->func() => 2+1,
+            $objeto->atributo => 3+1,
+        };
+        var_dump($resultado);
+        
     ?> 
 </body>
 </html>

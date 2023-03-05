@@ -1,6 +1,8 @@
 <?php 
 
     // testando json
+
+    // função json_decode
     $json_str = '{"nome": "J", "idade": 32, "sexo": "M"}';
     $obj = json_decode($json_str);
     // json_decode recebe como entrada uma strig codificada no formato JSON
@@ -73,5 +75,61 @@
     // com true
     $array = json_decode($json, true);
     var_dump($array); // é um array
+
+
+    echo "<hr>";
+    // função json_encode
+    // como o nome indica, faz o inverso de json_decode, transforma um objeto php em JSON
+
+    // Exemplo:
+
+    $idades = array ("João" => 18, "Lucas" => 19, "Luan" =>20);
+
+    // covertendo o array idades no formato json;
+    $_json = json_encode($idades);
+
+    echo "$_json";
+    var_dump($_json);
+
+
+    // Tratamento de erros, função json_last_error
+
+    /** constantes pré-definidas
+     * 0 = JSON_ERROR_NONE: nenhum erro ocorreu;
+     * 1 = JSON_ERROR_DEPTH: a profundidade máxima de aninhamento de uma string JSON foi excedida (esse valor máximo é 512);
+     * 2 = JSON_ERROR_STATE_MISMATCH: erro de underflow ou outro tipo de estado inválido;
+     * 3 = JSON_ERROR_CTRL_CHAR: foi encontrado um caractere de controle no corpo da string JSON;
+     * 4 = JSON_ERROR_SYNTAX: erro de sintaxe;
+     * 5 = JSON_ERROR_UTF8: erro na codificação UTF-8 da string JSON;
+     */
+    echo "<hr>";
+    $json_exemplo = '{"nome":"Juan", "idade":17, "sexo": M}';
+    $_obj_json = json_decode($json_exemplo);
+    // verifica se houve um erro
+    if (json_last_error() == 0) {
+        echo "Não houve erro.";
+    } else {
+        echo "Erro!";
+        switch (json_last_error()) {
+            case JSON_ERROR_DEPTH:
+                echo "erro de profundidade máxima";
+                break;
+            case JSON_ERROR_STATE_MISMATCH:
+                echo "state mismatch";
+                break;
+            case JSON_ERROR_CTRL_CHAR:
+                echo "Caracter de controle encontrado";
+                break;
+            case JSON_ERROR_SYNTAX:
+                echo "Erro de sintexe";
+                break;
+            case JSON_ERROR_UTF8:
+                echo "Erro na codificação UTF-8";
+                break;
+                default:
+                echo "Erro deconhecido";
+            break;
+        }
+    }
 
 ?>

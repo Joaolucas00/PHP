@@ -51,15 +51,53 @@
 
     // Por padrão, argumentos de função são passados por valor (de forma que se você mudar o valor do parâmetro dentro da função, ele não é alterado fora da função)
     
-    function adicionando_alguma_coisa(&$arg) 
+    function adicionando_alguma_coisa(&$string) 
     {
-        $arg .= "concatenada com isso";
+        $string .= "concatenada com isso";
     }
 
     $str = "Isto é uma string, ";
     adicionando_alguma_coisa($str);
     echo "$str";
 
+    // Uma função pode definir valores padrão para argumentos usando sintaxe similar a atribuição de uma variável
+    echo "<br>";
+    function cor_camisa($cor = "azul")
+    {
+        return "Esta camisa é da cor $cor";
+    }
+
+    echo cor_camisa() . "<br>"; // mostra o valor padrão
+    echo cor_camisa(null) . "<br>"; // null não atribui o valor padrão
+    echo cor_camisa("Rosa") . "<br>"; // muda o valor padrão para "Rosa"
+
+    
+    // objetos como valores padrão
+
+    //classes
+
+    class CafeteiraPadrao {
+        public function prepararCafe() {
+            return "Fazendo o café";
+        }
+    }
+
+    class CafeteiraMelhor {
+        public function prepararCafe() {
+            return "Preparando um café bem quentinho";
+        }
+    }
+
+    // código principal
+
+    function fazerCafe ($cafeteira = new CafeteiraPadrao) {
+        return $cafeteira->prepararCafe();
+    }
+
+    echo fazerCafe() . "<br>"; // por padrão vai ser a CafeteiraPadrao
+    echo fazerCafe(new CafeteiraMelhor) // alterando para CafeteiraMelhor
+
     ?>
+
 </body>
 </html>

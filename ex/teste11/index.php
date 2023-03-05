@@ -267,5 +267,6 @@
             f($cc);
         }
     ?> 
+    <a href="include.php">Testando include</a>
 </body>
 </html>

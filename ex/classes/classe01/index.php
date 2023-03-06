@@ -18,6 +18,13 @@
         $c1->tampada = true;
 
         $c1->rabiscar();
+        $c1->destampar();
+        $c1->rabiscar();
+
+        // pode ser feito com variável também
+        $classNome = 'Pessoas';
+        $instancia = new $classNome();
+        var_dump($instancia);
     
     
     ?>

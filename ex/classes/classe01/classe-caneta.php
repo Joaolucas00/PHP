@@ -13,9 +13,9 @@
         // declaração de método
         function rabiscar() {
             if ($this->tampada) {
-                echo "A caneta está tampada..";
+                echo "<br>A caneta está tampada.. <br>";
             } else {
-                echo "Rabiscando..";
+                echo "<br>Rabiscando..<br>";
             }
 
         }
@@ -29,7 +29,7 @@
         }
     }
 
-    class Pessoa {}
+    class Pessoas {}
 
 
 

@@ -304,7 +304,12 @@
     $f_a();
     var_dump($n3); // imprime int (2)
 
-
+    $nomes = ["João", "Lucas", "Juan"];
+    $fnc = strlen(...);
+    $tamanhos = array_map($fnc, $nomes);
+    echo "<pre>";
+    var_dump($tamanhos);
+    echo "</pre>";
 ?>
 
 

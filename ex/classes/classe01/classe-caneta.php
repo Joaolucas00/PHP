@@ -29,7 +29,9 @@
         }
     }
 
-    class Pessoas {}
+    class Pessoas {
+        public $nome;
+    }
 
 
 

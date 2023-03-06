@@ -25,6 +25,22 @@
         $classNome = 'Pessoas';
         $instancia = new $classNome();
         var_dump($instancia);
+        echo "<br>";
+
+        // Atribuição de Objetos
+
+        $objPessoas = new Pessoas;
+
+        $pessoa = $objPessoas;
+        $_pessoa = &$objPessoas;
+
+        $objPessoas->nome = "João";
+
+        $objPessoas = null; // objPessoas e $_pessoa se tornam nulos, isso porque eles apontam para o mesmo dado.
+
+        var_dump($objPessoas);
+        var_dump($_pessoa);
+        var_dump($pessoa);
     
     
     ?>

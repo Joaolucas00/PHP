@@ -276,6 +276,22 @@
     $n2 = 1;
     $fn3 = fn($num1) => fn($num2) => $num1 * $num2 + $n2;
     var_dump($fn3(5)(10)); // imprime 51
+
+
+    /**
+     * Da mesma forma que funções anônimas, a sintaxe das arrow functions permitem assinaturas de função arbitrária, 
+     * incluindo parâmetros e tipos de retorno, 
+     * valores padrão, variadics, bem como por referência passando e retornando. 
+     * Todos os exemplos válidos de arrow functions:
+     */
+    fn(array $x) => $x;
+    static fn(): int => $x;
+    fn($x = 42) => $x;
+    fn(&$x) => $x;
+    fn&($x) => $x;
+    fn($x, ...$rest) => $rest;
+
+
 ?>
 
 

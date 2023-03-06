@@ -95,9 +95,35 @@
     }
 
     echo fazerCafe() . "<br>"; // por padrão vai ser a CafeteiraPadrao
-    echo fazerCafe(new CafeteiraMelhor) // alterando para CafeteiraMelhor
+    echo fazerCafe(new CafeteiraMelhor); // alterando para CafeteiraMelhor
 
-    ?>
+
+    // é bom colocar argumentos padrões no último argumento
+
+    function fazeriogurte($recipiente = "tigela", $sabor)
+    {
+        return "Fazendo um(a) $recipiente de iogurte de $sabor.\n";
+    }
+    
+    //echo fazeriogurte("framboesa"); // "framboesa" é $recipiente, não $sabor, vai gerar um erro
+
+    // desse jeito é melhor 
+    function fazeriogurte_2($sabor, $recipiente = "tigela")
+    {
+        return "Fazendo um(a) $recipiente de iogurte de $sabor.\n";
+    }
+    
+    echo fazeriogurte_2("framboesa"); // "framboesa" é $sabor
+
+
+    // podemos pular argumento também
+
+    function exemplo ($var1 = 1, $var2 = 2, $var3 = 3, $var4 =4) {
+        return "$var1 . $var2 . $var3 . $var4";
+    }
+    echo exemplo (var3: 4);
+
+?>
 
 </body>
 </html>

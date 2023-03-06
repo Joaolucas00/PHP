@@ -139,6 +139,16 @@
 
     echo somar(1, 2, 3, 4);
 
+    //Utilizando ... para fornecer argumentos
+
+    function adicionar ($a, $b) {
+        return $a + $b;
+    }
+    echo adicionar(...[1, 2]);
+
+    $vetor = [1, 2];
+    echo adicionar(...$vetor);
+
 ?>
 
 </body>

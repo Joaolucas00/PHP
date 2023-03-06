@@ -192,6 +192,44 @@
     $funcname = "metodoVariavel";
     $obj->$funcname(); // equivalente a $foo->metodoVariavel
 
+
+
+    //  Exemplo de como definir uma função anônima para uma variável
+
+    $func_anonimo = function($name) {
+        echo "Olá, $name";
+    };
+
+    $func_anonimo('Mundo!');
+    $func_anonimo('PHP!');
+    echo "<hr>";
+
+    //Herdando variáveis do escopo anterior
+    $msg = 'Olá';
+
+    // Sem "use"
+    $exemplo = function () {
+        //var_dump($msg); da erro
+    };
+    $exemplo(); 
+
+    // Herdando $msg
+    $exemplo = function () use ($msg) {
+        var_dump($msg);
+    };
+    $exemplo();
+    // Herdando valor da variável quando a função é definida,
+    // não quando é chamada
+
+    $msg = "Mundo";
+    exemplo();
+
+    // herdando por refêrencia
+    $exemplo = function () use (&$msg) {
+        var_dump($msg);
+    };
+    exemplo();
+    
 ?>
 
 </body>

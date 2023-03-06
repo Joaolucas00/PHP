@@ -269,6 +269,13 @@
      * Closures (clausura, em português) é um conceito geralmente associado com as linguagens de programação funcionais (JavaScript, F# etc.) 
      * que vinculam uma função ao seu ambiente de referência, permitindo o acesso a variáveis fora do escopo da função.
      */
+
+
+    // 2 Arrow functions capturam variáveis por valor automaticamente, mesmo quando aninhadas
+
+    $n2 = 1;
+    $fn3 = fn($num1) => fn($num2) => $num1 * $num2 + $n2;
+    var_dump($fn3(5)(10)); // imprime 51
 ?>
 
 

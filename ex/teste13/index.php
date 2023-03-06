@@ -229,8 +229,23 @@
         var_dump($msg);
     };
     exemplo();
-    
+    echo "<hr>";
+
+    // Arrow Functions
+
+    $n1 = 1;
+
+    $fn1 = fn($num) => $num + $n1; // The fn keyword is used to create arrow functions.
+    var_dump($fn1);
+    // equivalente ao usar $y por valor:
+
+    /**
+     * Closures (clausura, em português) é um conceito geralmente associado com as linguagens de programação funcionais (JavaScript, F# etc.) 
+     * que vinculam uma função ao seu ambiente de referência, permitindo o acesso a variáveis fora do escopo da função.
+     */
 ?>
+
+
 
 </body>
 </html>

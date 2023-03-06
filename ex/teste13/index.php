@@ -222,23 +222,49 @@
     // não quando é chamada
 
     $msg = "Mundo";
-    exemplo();
+    $exemplo();
 
     // herdando por refêrencia
     $exemplo = function () use (&$msg) {
         var_dump($msg);
     };
-    exemplo();
-    echo "<hr>";
+    $exemplo();
 
+    // O valor modificado no escopo pai
+    // reflete quando a função é chamada
+    $msg = 'Mundo';
+    $exemplo();
+
+
+    // Closures também aceitam argumentos normais
+    $exemplo = function ($arg) use ($msg) {
+        var_dump($arg . ' ' . $msg);
+        };
+    $exemplo("Olá");
+
+    // Declaração de tipo de retorno após a instrução 'use'
+    $exemplo = function () use($msg): string {
+        return "Olá $msg";
+    };
+    var_dump($exemplo());
+
+
+    echo "<hr>";
     // Arrow Functions
 
     $n1 = 1;
 
     $fn1 = fn($num) => $num + $n1; // The fn keyword is used to create arrow functions.
     var_dump($fn1);
-    // equivalente ao usar $y por valor:
 
+    var_dump($fn1(3));
+    
+
+    // equivalente ao usar $y por valor:
+    $fn2 = function ($num) use ($n1) {
+        return $num + $n1;
+    };
+    var_dump($fn2(3));
     /**
      * Closures (clausura, em português) é um conceito geralmente associado com as linguagens de programação funcionais (JavaScript, F# etc.) 
      * que vinculam uma função ao seu ambiente de referência, permitindo o acesso a variáveis fora do escopo da função.

@@ -41,6 +41,26 @@
         var_dump($objPessoas);
         var_dump($_pessoa);
         var_dump($pessoa);
+
+        // outra maneira de criar objetos
+
+        class Teste {
+            static public function getNew() {
+                return new static;
+            }
+        }
+
+        class Child extends Teste {}
+
+        $obj_1 = new Teste();
+        $obj_2 = new $obj_1;
+        var_dump($obj_1 !== $obj_2);
+
+        $obj_3 = Teste::getNew();
+        var_dump($obj_3 instanceof Teste);
+
+        $obj_4 = Child::getNew();
+        var_dump($obj_4 instanceof Child);
     
     
     ?>

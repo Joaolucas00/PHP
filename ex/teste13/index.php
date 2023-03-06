@@ -175,6 +175,23 @@
     $func = 'wrapper_func';
     $func('teste'); // chama wrapper_func
 
+    //  Exemplo de chamada de um método variável
+
+    class Classe {
+        function metodoVariavel() {
+            $name = 'Fun';
+            $this->$name();
+        }
+
+        function Fun() {
+            echo "Fun foi chamada.";
+        }
+    }
+
+    $obj = new Classe();
+    $funcname = "metodoVariavel";
+    $obj->$funcname(); // equivalente a $foo->metodoVariavel
+
 ?>
 
 </body>

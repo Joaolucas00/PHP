@@ -148,6 +148,32 @@
 
     $vetor = [1, 2];
     echo adicionar(...$vetor);
+    echo "<hr>";
+
+    // Funções variáveis
+
+
+    function funcao_exemplo() {
+        echo "Chamou funcao_exemplo <br>";
+    }
+
+    function f($arg = '') {
+        echo "Chamou f(); com argumento '$arg'. <br>";
+    }
+
+    // Essa é uma função wrapper para echo()
+    function wrapper_func($string) {
+        echo $string;
+    }
+
+    $func = 'funcao_exemplo';
+    $func(); // chama funcao_exemplo
+
+    $func = 'f';
+    $func('teste'); // chama f()
+
+    $func = 'wrapper_func';
+    $func('teste'); // chama wrapper_func
 
 ?>
 

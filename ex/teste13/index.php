@@ -291,6 +291,19 @@
     fn&($x) => $x;
     fn($x, ...$rest) => $rest;
 
+    // Valores do escopo externo não podem ser modificados por arrow functions
+
+    $n3 = 1;
+    $fn4 = fn() => $n3++; // não modifica $n3, não tem efeito
+    $fn4();
+    var_dump($n3); // imprime int (1)
+
+    $f_a = function () use (&$n3) { // modifica $n3
+        $n3 += 1;
+    };
+    $f_a();
+    var_dump($n3); // imprime 2
+
 
 ?>
 

@@ -123,6 +123,22 @@
     }
     echo exemplo (var3: 4);
 
+
+
+    echo "<br>";
+    // utilizando ... para acessar argumentos variáveis
+    //Lista de argumentos que contém o token ... token para indicam que a função aceita uma quantidade variável de argumentos. Os argumentos serão passados na variável como um array:
+    function somar(...$numeros)
+    {
+        $soma = 0;
+        foreach ($numeros as $num) {
+            $soma += $num;
+        }
+        return $soma;
+    }
+
+    echo somar(1, 2, 3, 4);
+
 ?>
 
 </body>

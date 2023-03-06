@@ -51,7 +51,7 @@
 
     // Por padrão, argumentos de função são passados por valor (de forma que se você mudar o valor do parâmetro dentro da função, ele não é alterado fora da função)
     
-    function adicionando_alguma_coisa(&$string) 
+    function adicionando_alguma_coisa(&$string) // tem que ter & para modificar
     {
         $string .= "concatenada com isso";
     }
@@ -260,7 +260,7 @@
     var_dump($fn1(3));
     
 
-    // equivalente ao usar $y por valor:
+    // equivalente ao usar $n1 por valor:
     $fn2 = function ($num) use ($n1) {
         return $num + $n1;
     };
@@ -271,10 +271,10 @@
      */
 
 
-    // 2 Arrow functions capturam variáveis por valor automaticamente, mesmo quando aninhadas
+    // Arrow functions capturam variáveis por valor automaticamente, mesmo quando aninhadas
 
     $n2 = 1;
-    $fn3 = fn($num1) => fn($num2) => $num1 * $num2 + $n2;
+    $fn3 = fn($num1) => fn($num2) => $num1 * $num2 + $n2; 
     var_dump($fn3(5)(10)); // imprime 51
 
 
@@ -302,7 +302,7 @@
         $n3 += 1;
     };
     $f_a();
-    var_dump($n3); // imprime 2
+    var_dump($n3); // imprime int (2)
 
 
 ?>

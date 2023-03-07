@@ -92,6 +92,9 @@ use Exemplo as GlobalExemplo;
          */
 
          // Exemplo de propriedades tipadas
+
+         // OBS:
+         //Propriedades tipadas precisam ser inicializadas antes de serem acessadas, senão um Error é lançado.
          class A {
             public int $inteiro;
             public ?string $str; // ? para poder ser null
@@ -101,12 +104,36 @@ use Exemplo as GlobalExemplo;
                 $this->inteiro = $inteiro;
                 $this->str = $str;
             }
+
+            public function void(): void { // void indica que a função não vai ter retorno.
+                // return 0; lança um Fatal error.
+                // Fatal error: A void function must not return a value in C:\xampp\htdocs\curso-php\ex\classes\classe01\index.php on line 106 
+            }
          }
 
          $a = new A(2023, null);
 
          var_dump($a->inteiro);
          var_dump($a->str);
+
+         // Propriedades somente leitura
+         // A partir do PHP 8.1.0, uma propriedade pode ser declarada com o modificador readonly, o que previne modificação da propriedade após a inicialização
+
+         class B {
+            public readonly string $atributo;
+
+            public function __construct(string $atributo)
+            {   // inicialização permitida
+                $this->atributo = $atributo;
+            }
+         }
+        
+         $b = new B('Olá');
+         // Pode ser lido
+         var_dump($b->atributo);
+         // Modificação ilegal. Não importa que o valor seja o mesmo.
+        //$b->atributo = "Mundo";
+        // Error: Cannot modify readonly property Test::$prop
     ?>
 </body>
 </html>

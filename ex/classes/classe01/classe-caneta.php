@@ -6,7 +6,7 @@
 
         public string $modelo;
         public $cor;
-        var $ponta; // public por padrão
+        var $ponta; // public por padrão, mas é obsoleto
         public int $carga;
         public bool $tampada;
 
@@ -31,6 +31,9 @@
 
     class Pessoas {
         public $nome;
+        // Sem um modificador de visibilidade:
+        static $var1;
+        readonly int $var2;
     }
 
 

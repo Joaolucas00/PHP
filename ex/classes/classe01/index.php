@@ -65,6 +65,7 @@ use Exemplo as GlobalExemplo;
         $obj_4 = Child::getNew();
         var_dump($obj_4 instanceof Child);
     
+        echo "<hr>";
         
 
         //  Chamando uma função anônima armazenada em uma propriedade
@@ -85,8 +86,27 @@ use Exemplo as GlobalExemplo;
         echo ($exemplo->var)();
         echo ($exemplo->arrowF)();
         
+        /** OBS:
+         * Propriedades não estáticas são chamadas com -> (operadore de objeto)
+         * Propriedades estáticas são acessadas utilizando o operador :: (duplo dois pontos)
+         */
 
-    
+         // Exemplo de propriedades tipadas
+         class A {
+            public int $inteiro;
+            public ?string $str; // ? para poder ser null
+
+            public function __construct(int $inteiro, ?string $str) // mesma coisa aqui.
+            {
+                $this->inteiro = $inteiro;
+                $this->str = $str;
+            }
+         }
+
+         $a = new A(2023, null);
+
+         var_dump($a->inteiro);
+         var_dump($a->str);
     ?>
 </body>
 </html>

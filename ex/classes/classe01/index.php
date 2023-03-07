@@ -7,7 +7,10 @@
     <title>Classes PHP</title>
 </head>
 <body>
-    <?php 
+    <?php
+
+use Exemplo as GlobalExemplo;
+
         include_once 'classe-caneta.php';
 
         $c1 = new Caneta; // se não há argumentos a ser passado para o construtor, o parênteses é opcional.
@@ -62,6 +65,27 @@
         $obj_4 = Child::getNew();
         var_dump($obj_4 instanceof Child);
     
+        
+
+        //  Chamando uma função anônima armazenada em uma propriedade
+
+        class Exemplo {
+            public $var;
+            public $arrowF;
+
+            public function __construct() // método construtor
+            {
+                $this->var = function() {return 50;}; // função anônima
+                $this->arrowF = fn() => 50; // arrow function
+            }
+        }
+
+        $exemplo = new Exemplo();
+
+        echo ($exemplo->var)();
+        echo ($exemplo->arrowF)();
+        
+
     
     ?>
 </body>

@@ -1,9 +1,6 @@
 <?php 
-    class Classe01 {const ID1 = '1'; public $mID = fn() => self::ID1;}
+    // Construtores pais não são chamados implicitamente se a classe filha define um construtor. Para executar o construtor da classe pai, uma chamada a parent::__construct() dentro do construtor da classe filha é necessária. Se a classe filha não definir um construtor, será herdado da classe pai como um método normal (se não foi declarado como privado).
 
-    class Classe02 {const ID2 = '2'; public $mID = fn() => self::ID2;}
-
-    class Classe03 {const ID3 = '3'; public $mID = fn() => self::ID3;}
 
 
 ?>

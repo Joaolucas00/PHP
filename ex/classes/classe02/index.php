@@ -16,7 +16,7 @@
         Constantes::mostrarConstante();
         echo Constantes::CONSTANTE;
     
-    
+        echo "O valor de const TRES é " . Constantes::TRES 
 
     
     ?>

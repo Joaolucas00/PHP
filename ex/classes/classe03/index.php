@@ -28,6 +28,17 @@
         echo $c1->x;
         echo $c1->y;
 
+        /** New em inicializadores de parâmetros 
+         * A partir do PHP 8.1.0, objetos podem ser utilizados como valores padrão de parâmetros, 
+         * variáveis estáticas e constantes globais, assim como argumentos de atributos
+         */
+        class C {}
+        // Permitido
+        static $x = new C;
+
+        const C = new C;
+ 
+        function test($param = new C) {}
 
     ?>
 </body>

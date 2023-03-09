@@ -42,6 +42,11 @@
             $this->y = $y;
         }
     }
+    /**
+     *  Quanto um argumento de construtor incluir um modificador de visibilidade,
+     *  o PHP interpreta como sendo uma propriedade de objeto e como um argumento do construtor,
+     *  e assimilará o valor do argumento a uma propriedade de mesmo nome.
+     */
 
 
 

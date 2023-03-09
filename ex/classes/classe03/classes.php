@@ -48,6 +48,7 @@
      *  e assimilará o valor do argumento a uma propriedade de mesmo nome.
      */
 
+     // self é usado para acessar membros estáticos
 
 
 ?>

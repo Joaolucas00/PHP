@@ -42,7 +42,7 @@ use ClasseFilha as GlobalClasseFilha;
 
         Classe::$var_static = "Propriedade estática";
         print Classe::$var_static;
-        //$obj = new Classe;
+        //$obj = new Classe; erro
         print $obj->metStatic();
         $obj2 = new ClasseFilha;
         print ClasseFilha::$var_static;

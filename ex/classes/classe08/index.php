@@ -36,9 +36,9 @@
             {
                 return "Classe2";
             }
-
-            public function valorComParametro($p) {
-                return "{$p}Classe2";
+            // O método filho pode definir argumentos opcionais não presentes na assitura abstrata
+            public function valorComParametro($p, $q = '') {
+                return "{$p}Classe2{$q}";
             } 
         }
 
@@ -48,7 +48,7 @@
 
         $classe2 = new Classe2;
         $classe2->imprimir();
-        echo $classe2->valorComParametro("Mundo");
+        echo $classe2->valorComParametro("Mundo", "Ola");
 
 
     ?>

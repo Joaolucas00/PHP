@@ -36,17 +36,15 @@
             public const CONSTANTE = "Constante";
         }
 
-        class C implements Interfac {
+        class Cla implements Interfac {
             public function funcao () {return self::CONSTANTE;}
         }
 
-        $obj = new C;
-        print C::CONSTANTE;
+        $obj = new Cla;
+        print Cla::CONSTANTE;
         print $obj->funcao();
 
-        
 
-    
     
     ?>
 </body>

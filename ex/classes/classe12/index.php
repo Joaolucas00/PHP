@@ -38,6 +38,11 @@ use MinhaClasse as GlobalMinhaClasse;
     }
     // assim da pra mostrar o estado do objeto
     $obj->iterateViseble();
+    
+    
+    // Como a saída mostra, o foreach passou por cada uma das variáveis visíveis que podem ser acessadas.
+
+
 
 
     ?>

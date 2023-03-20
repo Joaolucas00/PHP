@@ -21,7 +21,7 @@
         // mysqli::query() só pode executar uma instrução SQL
         $resultado = $mysqli->query($sql);
 
-        /** Explicando melhor
+        /** Explicando melhor o código acima
          *  executa a consulta e coloca os dados resultantes em uma variável 
          * chamada $resultado.
          */

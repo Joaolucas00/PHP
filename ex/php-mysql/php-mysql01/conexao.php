@@ -33,7 +33,7 @@
                 echo " - curso preferido:  " . $row["curso_preferido"] . " - id :" . $row["id"] . " - Nome: " . $row["nome"] . "- profissao: " . $row["profissao"] . " - nascimento: " . $row["nascimento"] . "- sexo: " . $row["sexo"] . "- peso: " . $row["peso"] . "- altura: " . $row["altura"] . "- nacionalidade: " . $row["nacionalidade"] . "<br>";
             }
         }
-        $resultado->close(); // Fecha uma conexão de banco de dados aberta anterio
+        $resultado->close(); // Fecha uma conexão de banco de dados aberta anteriormente
 
         
         

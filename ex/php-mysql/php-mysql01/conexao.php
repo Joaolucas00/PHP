@@ -7,7 +7,7 @@
     
         $mysqli = new mysqli($hostname, $user, $senha, $db);
 
-        
+
         // verificando se está realmente conectado
         if ($mysqli->connect_errno) {
             echo "Falha ao conectar: ( " . $mysqli->connect_errno . ") ";
@@ -20,6 +20,11 @@
         // Executa uma consulta no banco de dados
         // mysqli::query() só pode executar uma instrução SQL
         $resultado = $mysqli->query($sql);
+
+        /** Explicando melhor
+         *  executa a consulta e coloca os dados resultantes em uma variável 
+         * chamada $resultado.
+         */
 
 
         // mostrando um select * from gafanhotos

@@ -8,10 +8,7 @@
 </head>
 <body>
     <?php 
-    
-    
-    
-    
+        include 'conexao.php';
     ?>
 </body>
 </html>

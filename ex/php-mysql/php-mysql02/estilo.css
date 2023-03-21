@@ -24,6 +24,7 @@ label {
     cursor: pointer;
     margin: 10px;
     width: 200px;
-    color: blueviolet;
-    background-color: rgb(66, 18, 110);
+    height: 60px;
+    color: rgb(229, 200, 255);
+    background-color: rgb(93, 39, 145);
 }

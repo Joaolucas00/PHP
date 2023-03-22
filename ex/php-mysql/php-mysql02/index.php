@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inserindo dados no banco de dados com php</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <?php 
-    include 'conexao.php';
-        // inserindo dados
-        
+        include 'conexao.php';
+
+    // inserindo dados
     ?>
-    <form action="" method="get">
+    <form action="" method="post">
         <label for="inome">nome: </label>
         <input type="text" name="nome" id="inome"> <br>
 
@@ -35,16 +36,15 @@
 
         <br>
         <label for="ipeso">peso:</label>
-        <input type="number" name="peso" id="ipeso"> <br>
-
+        <input type="number" name="peso" id="ipeso" step=".01"> <br>
         <label for="ialtura">altura:</label>
-        <input type="number" name="altura" id="ialtura"> <br>
+        <input type="number" name="altura" id="ialtura" step=".01"> <br>
 
         <label for="inacio">nacionalidade:</label>
         <input type="text" name="nacio" id="inacio">
 
         <br>
-        <input type="submit" value="Cadastrar" id="in_submit">
+        <input type="submit" value="Cadastrar" id="in_submit" name="botao">
     </form>
 
 </body>

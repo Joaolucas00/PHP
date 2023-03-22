@@ -5,11 +5,13 @@
     padding: 0px;
     margin: 0px;
     font-size: 1.05em;
+    font-family: 'Montserrat';
 }
 
 body, html {
     width: 100vw;
     height: 100vh;
+
 }
 
 input {
@@ -25,6 +27,7 @@ label {
     margin: 10px;
     width: 200px;
     height: 60px;
-    color: rgb(229, 200, 255);
+    color: rgb(242, 227, 255);
     background-color: rgb(93, 39, 145);
+    font-weight: 500;
 }

@@ -11,23 +11,37 @@
     <?php 
     include 'conexao.php';
         // inserindo dados
-    
+        
     ?>
     <form action="" method="get">
         <label for="inome">nome: </label>
         <input type="text" name="nome" id="inome"> <br>
-        <label for="icurso_pref">curso preferido</label>
+
+        <label for="icurso_pref">curso preferido:</label>
         <input type="number" name="curso_pref" id="icurso_pref"> <br>
-        <label for="iprofissao">profissao</label>
+
+        <label for="iprofissao">profissao:</label>
         <input type="text" name="profissao" id="iprofissao"> <br>
-        <label for="inasc">nascimento</label>
+
+        <label for="inasc">nascimento:</label>
         <input type="date" name="nasc" id="inasc"> <br>
+
+
         <label for="isexo">sexo:</label> <br>
-        <label for="iM">Masculino</label>
+        <label for="iM">Masculino:</label>
         <input type="radio" name="sexo" id="iM" checked value="M">
-        <label for="iF">Feminino</label>
+        <label for="iF">Feminino:</label>
         <input type="radio" name="sexo" id="iF" value="F">
 
+        <br>
+        <label for="ipeso">peso:</label>
+        <input type="number" name="peso" id="ipeso"> <br>
+
+        <label for="ialtura">altura:</label>
+        <input type="number" name="altura" id="ialtura"> <br>
+
+        <label for="inacio">nacionalidade:</label>
+        <input type="text" name="nacio" id="inacio">
 
         <br>
         <input type="submit" value="Cadastrar" id="in_submit">

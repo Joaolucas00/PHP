@@ -30,17 +30,19 @@
      // inserindo dados
 
      $curso_pref = (int) $_GET["curso_pref"];
-     $nome = $_POST["nome"];
-     $nasc = $_POST["nasc"];
-     $profissao = $_POST["profissao"];
-     $sexo = $_POST["sexo"];
-     $peso = (float) $_POST["peso"];
-     $altura = (float) $_POST["altura"];
-     $nacio = $_POST["nacio"];
+     $nome = $_POST["nome"] ?? null;
+     $nasc = $_POST["nasc"] ?? null;
+     $profissao = $_POST["profissao"] ?? null;
+     $sexo = $_POST["sexo"] ?? null;
+     $peso = (float) $_POST["peso"] ?? null;
+     $altura = (float) $_POST["altura"] ?? null;
+     $nacio = $_POST["nacio"] ?? null;
 
      $sql = "INSERT INTO `gafanhotos` (`curso_preferido`, `id`, `nome`, `profissao`, `nascimento`, `sexo`, `peso`, `altura`, `nacionalidade`) VALUES ('$curso_pref', '$id_atualizado', '$nome', '$profissao', '$nasc', '$sexo', '$peso', '$altura', '$nacio')";
 
+    if ($nome )) {![]
     $conn->query($sql);
+    }
     /**
      * INSERT INTO `gafanhotos` (`curso_preferido`, `id`, `nome`, `profissao`, `nascimento`, `sexo`, `peso`, `altura`, `nacionalidade`) VALUES ('18', NULL, 'João', 'ddd', '2017-03-16', 'M', '1.42', '1.70', 'Brasil');
      * 

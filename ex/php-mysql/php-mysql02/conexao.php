@@ -22,33 +22,37 @@
      *  PDO: $pdo = null;
      */
 
-     $sql_id = "SELECT id FROM gafanhotos";
-     $resultado = $conn->query($sql_id);
-     $id_atualizado = $resultado->num_rows;
-     $id_atualizado += 1;
-
      // inserindo dados
 
 
-     $nome = $_POST["nome"] ?? null;
-     $nasc = $_POST["nasc"] ?? null;
-     $profissao = $_POST["profissao"] ?? null;
-     $sexo = $_POST["sexo"] ?? null;
-     $nacio = $_POST["nacio"] ?? null;
 
 
-    if ($nome != null) {
+    if (isset($_POST['botao'])) {
+        
+        $sql_id = "SELECT id FROM gafanhotos";
+        $resultado = $conn->query($sql_id);
+        $id_atualizado = $resultado->num_rows;
+        $id_atualizado += 1;
+
+
+        $nome = $_POST["nome"];
+        $nasc = $_POST["nasc"];
+        $profissao = $_POST["profissao"];
+        $sexo = $_POST["sexo"];
+        $nacio = $_POST["nacio"];
+
         $curso_pref = (int) $_POST["curso_pref"];
         $peso = (float) $_POST["peso"];
         $altura = (float) $_POST["altura"];
    
         $sql = "INSERT INTO `gafanhotos` (`curso_preferido`, `id`, `nome`, `profissao`, `nascimento`, `sexo`, `peso`, `altura`, `nacionalidade`) VALUES ('$curso_pref', '$id_atualizado', '$nome', '$profissao', '$nasc', '$sexo', '$peso', '$altura', '$nacio')";
-        if ($conn->query($sql)) {
-            echo "
-            <script>
-                window.alert('Dado adicionado!')
-            </script>";
-        }
+        $conn->query($sql); 
+
+        header('Location: index.php');
+        echo "
+        <script>
+            window.alert('Dado adicionado!')
+        </script>";
     }
     /**
      * INSERT INTO `gafanhotos` (`curso_preferido`, `id`, `nome`, `profissao`, `nascimento`, `sexo`, `peso`, `altura`, `nacionalidade`) VALUES ('18', NULL, 'João', 'ddd', '2017-03-16', 'M', '1.42', '1.70', 'Brasil');

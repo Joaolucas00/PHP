@@ -9,12 +9,8 @@
 
 </head>
 <body>
-    <?php 
-        include 'conexao.php';
 
-    // inserindo dados
-    ?>
-    <form action="" method="post">
+    <form action="conexao.php" method="post" autocomplete="off">
         <label for="inome">nome: </label>
         <input type="text" name="nome" id="inome" required> <br>
 

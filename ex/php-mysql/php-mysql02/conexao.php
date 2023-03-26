@@ -48,12 +48,10 @@
         $sql = "INSERT INTO `gafanhotos` (`curso_preferido`, `id`, `nome`, `profissao`, `nascimento`, `sexo`, `peso`, `altura`, `nacionalidade`) VALUES ('$curso_pref', '$id_atualizado', '$nome', '$profissao', '$nasc', '$sexo', '$peso', '$altura', '$nacio')";
         $conn->query($sql); 
 
-        header('Location: index.php');
-        echo "
-        <script>
-            window.alert('Dado adicionado!')
-        </script>";
+
     }
+    header('Location: index.php');
+    exit;
     /**
      * INSERT INTO `gafanhotos` (`curso_preferido`, `id`, `nome`, `profissao`, `nascimento`, `sexo`, `peso`, `altura`, `nacionalidade`) VALUES ('18', NULL, 'João', 'ddd', '2017-03-16', 'M', '1.42', '1.70', 'Brasil');
      * 

@@ -39,7 +39,34 @@
     $nome = "Alison";
     $stmt->execute();
 
+    // Assim nós podemos inserir vários outros dados
     
+
+    $cp = 23;
+    $nome = "Bianca";
+    $stmt->execute();
+
+    $cp = 24;
+    $nome = "Rodrigo";
+    $stmt->execute();
+
+    $cp = 25;
+    $nome = "Rafael";
+    $stmt->execute();
+
+
+    /**   Em comparação com a execução direta de instruções SQL, as instruções preparadas têm três vantagens principais:
+     * 
+     *     As instruções preparadas reduzem o tempo de análise, 
+     * pois a preparação da consulta é feita apenas uma vez (embora a instrução seja executada várias vezes)
+     * 
+     *     Os parâmetros vinculados minimizam a largura de banda para o servidor, 
+     * pois você precisa enviar apenas os parâmetros de cada vez, e não toda a consulta
+     * 
+     *      As instruções preparadas são muito úteis contra injeções de SQL, porque os valores de parâmetro, que são transmitidos posteriormente usando um protocolo diferente, 
+     * não precisam ser escapados corretamente. 
+     * Se o modelo de instrução original não for derivado de uma entrada externa, a injeção de SQL não poderá ocor */
+
 
 
 ?>

@@ -54,6 +54,8 @@
     $nome = "Rafael";
     $stmt->execute();
 
+    $stmt->close();
+    $banco_de_dados->close();
 
     /**   Em comparação com a execução direta de instruções SQL, as instruções preparadas têm três vantagens principais:
      * 
@@ -63,7 +65,8 @@
      *     Os parâmetros vinculados minimizam a largura de banda para o servidor, 
      * pois você precisa enviar apenas os parâmetros de cada vez, e não toda a consulta
      * 
-     *      As instruções preparadas são muito úteis contra injeções de SQL, porque os valores de parâmetro, que são transmitidos posteriormente usando um protocolo diferente, 
+     *      As instruções preparadas são muito úteis contra injeções de SQL, porque os valores de parâmetro, 
+     * que são transmitidos posteriormente usando um protocolo diferente, 
      * não precisam ser escapados corretamente. 
      * Se o modelo de instrução original não for derivado de uma entrada externa, a injeção de SQL não poderá ocor */
 

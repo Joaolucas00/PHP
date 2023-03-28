@@ -22,7 +22,7 @@
 
     $stmt->bind_param("is", $cp, $nome);
     /** Essa função vincula os parâmetros à consulta SQL e informa ao banco de dados quais são os parâmetros. 
-     * O argumento "sss" lista os tipos de dados que são os parâmetros. 
+     * O argumento "is" lista os tipos de dados que são os parâmetros. 
      * O caractere s diz ao mysql que o parâmetro é uma string.
      * 
      *  O argumento pode ser um dos quatro tipos:

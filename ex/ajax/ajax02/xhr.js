@@ -1,12 +1,16 @@
 var xhr = new XMLHttpRequest();
-
-xhr.responseType = "json";
+var documento = {
+    "userId": 501,
+    "id": 2,
+    "title": "Como fazer requisições AJAX sem Jquery",
+    "body": "Desenvolvedor larga jquery após decobrir o quão é fácil fazer requisições com AJAX sem jquery"
+}
 
 xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4 && xhr.status == 200) {
+    if (xhr.readyState == 4) {
         console.log(xhr);
     }
 }
 
-xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1");
-xhr.send();
+xhr.open("POST", "https://jsonplaceholder.typicode.com/posts");
+xhr.send(documento);

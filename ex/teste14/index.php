@@ -26,8 +26,13 @@
 
     var_dump($hint);
     var_dump(substr("Eliona", 0, 2)); // El
-    var_dump(stristr("El", "El")) // var_dump("El" == true) output true
+    var_dump(stristr("El", "El")); // var_dump("El" == true) output true
     
+    echo "<hr>";
+    $link = "https://www.w3schools.com/php/php_ajax_php.asp";
+    echo "<a href=\"$link\">w3schools</a>";
     ?>
+
+    <a href=""></a>
 </body>
 </html>

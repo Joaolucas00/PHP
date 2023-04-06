@@ -31,8 +31,14 @@
     echo "<hr>";
     $link = "https://www.w3schools.com/php/php_ajax_php.asp";
     echo "<a href=\"$link\">w3schools</a>";
+    echo "<hr>";
+    var_dump($_SERVER['REQUEST_METHOD']);
     ?>
+    <form action="action.php" method="post">
+        <label for="inome">Nome: </label>
+        <input type="text" name="nome" id="inome">
 
-    <a href=""></a>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>

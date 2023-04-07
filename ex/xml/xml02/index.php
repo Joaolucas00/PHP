@@ -16,7 +16,7 @@
     print_r($xml);
     echo "</pre>";
 
-    // pegando atributo do xml
+    // pegando atributo do xml com attributes()
     foreach ($xml->pessoa[1]->attributes() as $a => $b) {
         echo "$a = $b";
     }

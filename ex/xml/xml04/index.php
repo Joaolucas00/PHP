@@ -9,8 +9,27 @@
 <body>
     <?php 
     
+    //  Obtendo valores de nó de elementos específicos
+    $xml = simplexml_load_file("livros.xml");
+
+    echo $xml->book[0]->title . "<br>";
+    echo $xml->book[3] ->title . "<br>";
+
+    echo "<hr>";
+    // Obtendo valores de nó - Loop
+
+    // $xml->children(): encontra filhos de determinado nó
+    foreach ($xml->children() as $livros) { 
+        echo $livros->title . ", ";
+        echo $livros->author . ", ";
+        echo $livros->year . ", ";
+        echo $livros->price . "<br>";
+    }
     
-    
+    // Obtendo valores de atributo de maneira mais fácil
+
+    echo $xml->book[0]['category'] . "<br>";
+    echo $xml->book[1]->title['lang'];
     
     ?>
 </body>

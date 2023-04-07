@@ -8,13 +8,27 @@
 </head>
 <body>
     <script>
-
+        function mostrarSugestao(str) {
+            if (str.lenght == 0) {
+                document.getElementById("txtSugestao").innerHTML = this.responseText;
+                return;
+            } else {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status) {
+                        document.getElementById("txtSugestao").innerHTML = this.responseText;
+                    }
+                };
+                xhr.open("GET", "analisar.php?q=" + str, true);
+                xhr.send();
+            }
+        }
 
     </script>
 
     <form action="" autocomplete="off">
         <label for="inome">Nome: </label>
-        <input type="text" name="nome" id="inome">
+        <input type="text" name="fnome" id="inome" onkeyup="mostrarSugestao(this.value)">
     </form>
     <p>Sugestão: <span id="txtSugestao"></span></p>
 

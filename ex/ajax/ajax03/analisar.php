@@ -46,7 +46,7 @@
         foreach ($a as $nome) {
             if (stristr($q, substr($nome, 0, $tamanho))) {
                 if ($sugestao === "") {
-                    $sugestao = "nome";
+                    $sugestao = $nome;
                 } else {
                     $sugestao .= ", $nome";
                 }
@@ -54,6 +54,10 @@
         }
     }
 
-    echo $sugestao === "" ? "sem sugestão" : $sugestao;
-
+    echo $sugestao === "" ? "sem sugestão" : $sugestao; // a $sugestao vai no response e responseText assim também como o resto do documento abaixo se tiver algo
+    
+    // O xhr do js após ser enviado, ele vai pegar o documento inteiro, e também o html abaixo
 ?>
+
+
+    <h1>Ola mundo</h1>

@@ -21,6 +21,8 @@
         echo "$a = $b";
     }
 
+    echo $xml->pessoa[0]->nome;
+
     ?>
 </body>
 </html>

@@ -16,7 +16,7 @@
         </pessoa>
         ";
 
-        // The PHP simplexml_load_string() function is used to read XML data from a string.
+        // A função PHP simplexml_load_string() é usada para ler dados XML de uma string.
         $xml = simplexml_load_string($xmlDados);
 
         print_r($xml);

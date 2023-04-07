@@ -7,11 +7,20 @@
     <title>XML</title>
 </head>
 <body>
-    <?php 
-        
+    <?php     
+    // A função PHP simplexml_load_file() é usada para ler dados XML de um arquivo.
 
-    
-    
+    $xml = simplexml_load_file("dados.xml");
+
+    echo "<pre>";
+    print_r($xml);
+    echo "</pre>";
+
+    // pegando atributo do xml
+    foreach ($xml->pessoa[1]->attributes() as $a => $b) {
+        echo "$a = $b";
+    }
+
     ?>
 </body>
 </html>

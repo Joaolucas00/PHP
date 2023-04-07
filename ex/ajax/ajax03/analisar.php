@@ -56,7 +56,7 @@
 
     echo $sugestao === "" ? "sem sugestão" : $sugestao; // a $sugestao vai no response e responseText assim também como o resto do documento abaixo se tiver algo
 
-
+    // O xhr do js após ser enviado, ele vai pegar o documento inteiro, e também o html abaixo
 ?>
 
 

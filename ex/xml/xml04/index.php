@@ -30,7 +30,19 @@
 
     echo $xml->book[0]['category'] . "<br>";
     echo $xml->book[1]->title['lang'];
-    
+
+    echo "<hr>";
+
+    // Obtendo valores de atributo - Loop
+
+    foreach ($xml->children() as $livros) {
+        echo "Categoria:  " . $livros['category'];
+        echo "<br>"; 
+        echo "Idioma:  " . $livros->title['lang'];
+        echo "<br>";
+    }
+
+
     ?>
 </body>
 </html>

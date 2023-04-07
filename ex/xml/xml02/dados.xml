@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pessoas>
+
+    <pessoa id="1">
+        <nome>João</nome>
+        <idade>18</idade>
+    </pessoa>
+    
+    <pessoa id="2">
+        <nome>Lucas</nome>
+        <idade>19</idade>
+    </pessoa>
+
+</pessoas>

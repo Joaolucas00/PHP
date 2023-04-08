@@ -29,6 +29,7 @@
         //  O exemplo acima cria um DOMDocument-Object e carrega o XML de "dados.xml" nele.
         //  Em seguida, a função saveXML() coloca o documento XML interno em uma string, para que possamos produzi-lo.
     
+        echo "<br><hr>";
 
         // Looping pelo XML
 
@@ -36,6 +37,11 @@
         $xmlDoc->load("dados.xml");
 
         $x = $xmlDoc->documentElement; // Representa um documento HTML ou XML inteiro; serve como a raiz da árvore de documentos.
+
+        foreach ($x->childNodes as $item) {
+            echo $item->nodeName . " = " . $item->nodeValue . "<br>";
+            echo "        ->  " . $item->nodeType . "     <-";
+        }
     
     ?>
 </body>

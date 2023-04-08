@@ -1,4 +1,7 @@
 <?php 
+    // Verifica qual método http é usado
+    //$_SERVER['REQUEST_METHOD'] ->  Contém o método de request utilizando para acessar a página. Geralmente 'GET', 'HEAD', 'POST' ou 'PUT'.
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $a = [
         "Ana", 
         "Anita", 
@@ -53,6 +56,7 @@
             }
         }
     }
+}
 
     echo $sugestao === "" ? "sem sugestão" : $sugestao; // a $sugestao vai no response e responseText assim também como o resto do documento abaixo se tiver algo
 

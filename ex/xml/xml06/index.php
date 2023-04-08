@@ -42,6 +42,15 @@
             echo $item->nodeName . " = " . $item->nodeValue . "<br>";
             echo "        ->  " . $item->nodeType . "     <-";
         }
+
+        /** nodeType 
+         *  Obtém o tipo do nó. Uma das constantes XML_xxx_NODE predefinidas
+         * 
+         *  Alguns exemplos:
+         *  1	Nó é um DOMElement
+         *  2	Nó é um DOMAttr
+         *  3	Nó é um DOMText
+         */
     
     ?>
 </body>

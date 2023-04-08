@@ -17,6 +17,16 @@
           * Level 2: Root element: <from>
           * Level 3: Text element: "Jani"
          */
+
+
+         // Carregar e gerar XML
+        
+         $xml = new DOMDocument();
+         $xml->load("dados.xml"); // Carregar XML de um arquivo
+
+         print $xml->saveXML(); // Despeja a árvore XML interna de volta em uma string
+
+        //  O exemplo acima cria um DOMDocument-Object e carrega o XML de "dados.xml" nele.
     
     
     ?>

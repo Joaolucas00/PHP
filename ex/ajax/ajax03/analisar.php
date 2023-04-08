@@ -60,4 +60,5 @@
 ?>
 
 
-    <h1>Ola mundo</h1>
+    <h1>Funcionamento do AJAX</h1>
+    <img src="ajax.gif" alt="Imagem explicativa do funcionamento do ajax">

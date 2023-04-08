@@ -2,4 +2,7 @@
 <pessoa>
     <nome>João</nome>
     <idade>18</idade>
+    <altura>1.78</altura>
+    <peso>90.09</peso>
+    <nacionalidade>Brasil</nacionalidade>
 </pessoa>

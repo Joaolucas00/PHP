@@ -8,7 +8,15 @@
 </head>
 <body>
     <?php 
-    
+        /**  O Analisador XML DOM
+         * O analisador DOM é um analisador baseado em árvore.
+         */
+
+         /**  O DOM vê o XML acima como uma estrutura de árvore: 
+          * Level 1: XML Document
+          * Level 2: Root element: <from>
+          * Level 3: Text element: "Jani"
+         */
     
     
     ?>

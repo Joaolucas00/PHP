@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <script>
+        function mostrarBusca(valor) {
+            if (valor.lenght == 0) {
+                document.getElementById("pesquisa").innerHTML = "";
+                document.getElementById("pesquisa").style.border="0px";
+                return;
+            }
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                document.getElementById("pesquisa").innerHTML = this.responseText;
+                document.getElementById("pesquisa").style.border="1px solid black";
+                console.log(xhr);
+            }
+
+            xhr.open("GET", "buscar.php?q="+valor,true);
+            xhr.send();
+        }
+    </script>
+
+    <form action="">
+        <label for="ibusca">Pesquisar: </label>
+        <input type="search" name="ibusca" id="busca" onkeyup="mostrarBusca(this.value)">
+        <div id="pesquisa"></div>
+    </form>
+</body>
+</html>

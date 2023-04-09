@@ -1,6 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <paginas>
     <link>
-        <titulo></titulo>
-        <url></url>
+        <titulo>Banco de dados</titulo>
+        <url>http://localhost/curso-php/ex/php-mysql/php-mysql02/</url>
+    </link>
+    <link>
+        <titulo>Ex006</titulo>
+        <url>http://localhost/curso-php/ex/ex006/</url>
+    </link>
+    <link>
+        <titulo>Ajax03</titulo>
+        <url>http://localhost/curso-php/ex/ajax/ajax03/</url>
     </link>
 </paginas>

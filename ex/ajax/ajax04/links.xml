@@ -12,4 +12,92 @@
         <titulo>Ajax03</titulo>
         <url>http://localhost/curso-php/ex/ajax/ajax03/</url>
     </link>
+    <link>
+        <titulo>Mini-projeto Android</titulo>
+        <url>https://joaolucas00.github.io/html-css/ex/ex017(mini-projeto)/android.html</url>
+    </link>
+    <link>
+        <titulo>Mini-projeto Cordel</titulo>
+        <url>https://joaolucas00.github.io/html-css/ex/ex020(mini-projeto-cordel)/cordel.html</url>
+    </link>
+    <link>
+        <titulo>Mini-projeto Celular</titulo>
+        <url>https://joaolucas00.github.io/html-css/ex/ex023(mini-projeto)/</url>
+    </link>
+    <link>
+        <titulo>Login</titulo>
+        <url>https://joaolucas00.github.io/html-css/ex/ex027/</url>
+    </link>
+    <link>
+        <titulo>Joaolucas00</titulo>
+        <url>https://github.com/Joaolucas00</url>
+    </link>
+    <link>
+        <titulo>Joaolucas00 PHP</titulo>
+        <url>https://github.com/Joaolucas00/PHP</url>
+    </link>
+    <link>
+        <titulo>Joaolucas00 Java</titulo>
+        <url>https://github.com/Joaolucas00/Java</url>
+    </link>
+    <link>
+        <titulo>Joaolucas00 HTML e CSS</titulo>
+        <url>https://github.com/Joaolucas00/html-css</url>
+    </link>
+    <link>
+        <titulo>Joaolucas00 Exercícios de Python do curso em vídeo</titulo>
+        <url>https://github.com/Joaolucas00/PythonExercicios</url>
+    </link>
+    <link>
+        <titulo>Joaolucas00 Javascript</titulo>
+        <url>https://github.com/Joaolucas00/javascript</url>
+    </link>
+    <link>
+        <titulo>Documentação do PHP</titulo>
+        <url>https://www.php.net/manual/pt_BR/</url>
+    </link>
+    <link>
+        <titulo>Documentação do Laravel</titulo>
+        <url>https://laravel.com/docs/10.x</url>
+    </link>
+    <link>
+        <titulo>Ajax com PHP</titulo>
+        <url>https://www.w3schools.com/php/php_ajax_intro.asp</url>
+    </link>
+    <link>
+        <titulo>XML com PHP</titulo>
+        <url>https://www.w3schools.com/php/php_xml_parsers.asp</url>
+    </link>
+    <link>
+        <titulo>W3Schools</titulo>
+        <url>https://www.w3schools.com</url>
+    </link>
+    <link>
+        <titulo>Alura</titulo>
+        <url>https://www.alura.com.br</url>
+    </link>
+    <link>
+        <titulo>Curso em Vídeo</titulo>
+        <url>https://www.youtube.com/@CursoemVideo</url>
+    </link>
+    <link>
+        <titulo>Pexels</titulo>
+        <url>https://www.pexels.com/pt-br/</url>
+    </link>
+    <link>
+        <titulo>Palleton</titulo>
+        <url>https://paletton.com/</url>
+    </link>
+    <link>
+        <titulo>Amazon</titulo>
+        <url>https://www.amazon.com.br/</url>
+    </link>
+    <link>
+        <titulo>Localhost curso-php</titulo>
+        <url>http://localhost/curso-php/</url>
+    </link>
+    <link>
+        <titulo>PHPMyAdmin</titulo>
+        <url>http://localhost/phpmyadmin/</url>
+    </link>
 </paginas>

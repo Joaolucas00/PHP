@@ -1,12 +1,24 @@
 <?php 
     $q = $_REQUEST["q"];
 
-    $xml = new DOMDocument();
-    $xml->load("links.xml");
+    $xml = simplexml_load_file("links.xml");
+    
+    if (strlen($q) > 1) {
+        $reponse = "";
+        foreach ($xml->children() as $link) {
+            if (stristr($link->titulo, $q)) {
+                if ($reponse == "") {
+                    $reponse = "<a href='" . $link->url . "' target='_blank'>" . $link->titulo . "</a>";
+                } else {
+                    $reponse .= "<br> <a href='" . $link->url . "' target='_blank'>" . $link->titulo . "</a>";
+                }
+            }
+        }
+    }
 
-    $x = $xml->getElementById('link');
-    var_dump($x)
-
-
-
-?>
+    if (!isset($reponse)) {
+        echo "Sem sugestão";
+    } else if (isset($reponse)) {
+        $reponse_enviar = $reponse;
+        echo $reponse_enviar;
+    }

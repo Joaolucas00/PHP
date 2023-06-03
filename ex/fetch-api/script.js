@@ -6,7 +6,11 @@ function getText() {
         return res.text();
     })
     .then((data) => {
+        document.querySelector('div#output').innerHTML = data;
         console.log(data);
+    }).catch((err) => {
+        document.querySelector('div#output').innerHTML = "<p>Oops! Algum erro foi desparado!</p>";
+        console.log('Oops! Erro: ' + err);
     });
 
 

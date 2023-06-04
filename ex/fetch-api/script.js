@@ -15,16 +15,16 @@ function getText() {
 }
 
 function getJson() {
-    console.log('ola');
-    
     fetch('users.json')
     .then((response) => {
-        console.log(response);
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
     })
     .catch((err) => {console.log(err);})
     
 }
-
 
     /** Mozila - https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x
      * 

@@ -1,5 +1,5 @@
 document.querySelector('button#getText').addEventListener('click', getText);
-
+document.querySelector('button#getJson').addEventListener('click', getJson);
 function getText() {
     fetch('sample-txt.txt')
     .then((res) => {
@@ -12,7 +12,18 @@ function getText() {
         document.querySelector('div#output').innerHTML = "<p>Oops! Algum erro foi desparado!</p>";
         console.log('Oops! Erro: ' + err);
     });
+}
 
+function getJson() {
+    console.log('ola');
+    
+    fetch('users.json')
+    .then((response) => {
+        console.log(response);
+    })
+    .catch((err) => {console.log(err);})
+    
+}
 
 
     /** Mozila - https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x
@@ -22,4 +33,3 @@ function getText() {
      * Ela também fornece o método global fetch() (en-US) que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede.
      * 
      */
-}

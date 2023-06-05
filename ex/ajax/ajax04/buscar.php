@@ -19,6 +19,5 @@
     if (!isset($reponse)) {
         echo "Sem sugestão";
     } else if (isset($reponse)) {
-        $reponse_enviar = $reponse;
-        echo $reponse_enviar;
+        echo $reponse;
     }

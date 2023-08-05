@@ -19,7 +19,7 @@
                 document.getElementById("pesquisa").style.border="0px";
                 return;
             }
-            var xrh = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function () {
                 document.getElementById("pesquisa").innerHTML = this.responseText;
                 document.getElementById("pesquisa").style.border="1px solid black";

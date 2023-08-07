@@ -41,7 +41,7 @@ use Classe2 as GlobalClasse2;
         var_dump($obj);
         echo "<hr>";
         var_dump($obj2);
-    
+
     
     ?>
 </body>

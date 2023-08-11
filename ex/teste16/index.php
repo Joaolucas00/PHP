@@ -11,9 +11,9 @@
             public function foo() {
                 echo("foo()");
                 
-            function bar() {
-                echo("bar()");
-            }
+                function bar() {
+                    echo("bar()");
+                }
             }
         }
         

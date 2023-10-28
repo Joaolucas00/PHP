@@ -51,6 +51,7 @@
 
         var_dump(sum(1, 2));
         //var_dump(sum(1.5, 2.5)); não funciona com strict_types ativado, lança um TypeError
+
     ?>
 </body>
 </html>

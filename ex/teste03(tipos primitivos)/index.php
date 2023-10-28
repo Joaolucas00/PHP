@@ -43,6 +43,7 @@
         // Que também é equivalente a $z = ($y OR $x).
         var_dump($z);
         $a = 1_234_567; // número decimal (a partir do PHP 7.4.0). O PHP irá remover os sublinhados, é bom colocar para melhor leitura.
+        var_dump($a);
 
     ?>
 </body>

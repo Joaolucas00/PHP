@@ -86,7 +86,7 @@
         var_dump($arr);
         echo "<br>";
         unset($value); // quebra a referência com o último elemento
-        var_dump($arr); // $arr é (2, 4, 6, 8) agora
+        var_dump($arr); // $arr é (2, 4, 6, 8) agora 
 
         // outra forma de fazer a mesma coisa
         foreach (array(1, 2, 3, 4) as &$valor) {
@@ -197,7 +197,7 @@
 
         var_dump($valor_de_retorno);
         echo "<br>";
-        class Classe {
+        class Clase {
             public $atributo = 3;
             public function func() {
                 return 2;
@@ -206,7 +206,7 @@
         }
 
         $var = 3;
-        $objeto = new Classe;
+        $objeto = new Clase;
         function funcao() {return 0;}
         $resultado = match ($var) {
             funcao() => $var+1,

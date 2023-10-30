@@ -14,7 +14,7 @@
         var_dump(100 >= "1e2"); // 100 == 100 -> true
 
 
-        $a = (empty($_REQUEST['exemplo'])) ? null: $_REQUEST['exemplo'];
+        $a = (empty($_REQUEST['exemplo'])) ? null: $_REQUEST['exemplo'] ;
         var_dump($a);
 
         // a expressão acima é idêntico a este if/else abaixo

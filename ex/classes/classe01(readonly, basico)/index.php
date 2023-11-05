@@ -46,7 +46,7 @@ use Exemplo as GlobalExemplo;
         var_dump($pessoa);
 
         // outra maneira de criar objetos
-
+        /*
         class Teste {
             static public function getNew() {
                 return new static;
@@ -65,7 +65,7 @@ use Exemplo as GlobalExemplo;
         $obj_4 = Child::getNew();
         var_dump($obj_4 instanceof Child);
     
-        echo "<hr>";
+        echo "<hr>"; */
         
 
         //  Chamando uma função anônima armazenada em uma propriedade

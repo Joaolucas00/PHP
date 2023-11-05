@@ -13,9 +13,7 @@
         $teste = new Teste('test');
 
         $teste->metPublico(new Teste('test'));
-    
-    
-    
+     
     ?>
 </body>
 </html>

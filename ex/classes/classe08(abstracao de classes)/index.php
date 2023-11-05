@@ -21,7 +21,7 @@
             }
         }
 
-        class Classe1 extends ClasseAbstrata {
+        class Classe_ extends ClasseAbstrata {
             protected function pegarValor() {
                 return "Classe1";
             }
@@ -42,7 +42,7 @@
             } 
         }
 
-        $classe1 = new Classe1;
+        $classe1 = new Classe_;
         $classe1->imprimir();
         echo $classe1->valorComParametro("Ola");
 

@@ -177,7 +177,7 @@
 
     //  Exemplo de chamada de um método variável
 
-    class Classe {
+    class Clase {
         function metodoVariavel() {
             $name = 'Fun';
             $this->$name();
@@ -188,7 +188,7 @@
         }
     }
 
-    $obj = new Classe();
+    $obj = new Clase();
     $funcname = "metodoVariavel";
     $obj->$funcname(); // equivalente a $foo->metodoVariavel
 
